@@ -9,12 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/common.css">
     <style>
-        *{
-            font-family: 'Be Vietnam Pro', sans-serif;
+        .availablility-form{
+            margin-top: -50px;
+            z-index: 2;
+            position: relative;
         }
-        .h-font{     
-            font-family: 'Poppins', sans-serif;
+
+        @media screen and(max-width: 575px) {
+            .availablility-form{
+                margin-top: 25px;
+                padding: 0 35px;
+            }
         }
     </style>
 </head>
@@ -167,6 +174,167 @@
             <div class="swiper-slide">
                 <img src="images/carousel/7.png" class="w-100 d-block"/>
             </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Our Rooms-->
+    <h2 class = "mt-5 pt-4 mb-4 text-center fx-bold h-font ">OUR ROOMS</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+                    <img src="images/rooms/1.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Simple Room Name</h5>
+                        <h6 class="mb-4">200.000VND/đêm</h6>
+                        <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            2 phòng
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            1 phòng tắm
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            1 ban công
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            3 ghế sofa
+                            </span>
+                        </div>
+                        <div class="facilities mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Wifi 
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Tivi 
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Máy sưởi
+                            </span>
+                        </div>
+                        <div class="rating mb-4">
+                            <h6 class="mb-1">Rating</h6>
+                            <span class="badge rounded-pill bg-light">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>  
+                            </span>
+                           
+                        </div>
+                        <div class="d-flex justify-content-evenly mb-2">
+                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Đặt phòng</a>
+                            <a href="#" class="btn btn-sm btn-outline-dark shadow-none" >Thông tin chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+                    <img src="images/rooms/1.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Simple Room Name</h5>
+                        <h6 class="mb-4">200.000VND/đêm</h6>
+                        <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            2 phòng
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            1 phòng tắm
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            1 ban công
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            3 ghế sofa
+                            </span>
+                        </div>
+                        <div class="facilities mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Wifi 
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Tivi 
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Máy sưởi
+                            </span>
+                        </div>
+                        <div class="rating mb-4">
+                            <h6 class="mb-1">Rating</h6>
+                            <span class="badge rounded-pill bg-light">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>  
+                            </span>
+                           
+                        </div>
+                        <div class="d-flex justify-content-evenly mb-2">
+                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Đặt phòng</a>
+                            <a href="#" class="btn btn-sm btn-outline-dark shadow-none" >Thông tin chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+                    <img src="images/rooms/1.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Simple Room Name</h5>
+                        <h6 class="mb-4">200.000VND/đêm</h6>
+                        <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            2 phòng
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            1 phòng tắm
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            1 ban công
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            3 ghế sofa
+                            </span>
+                        </div>
+                        <div class="facilities mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Wifi 
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Tivi 
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Máy sưởi
+                            </span>
+                        </div>
+                        <div class="rating mb-4">
+                            <h6 class="mb-1">Rating</h6>
+                            <span class="badge rounded-pill bg-light">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>  
+                            </span>
+                           
+                        </div>
+                        <div class="d-flex justify-content-evenly mb-2">
+                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Đặt phòng</a>
+                            <a href="#" class="btn btn-sm btn-outline-dark shadow-none" >Thông tin chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 text-center mt-5">
+                <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Rooms>>></a>
+                
             </div>
         </div>
     </div>
