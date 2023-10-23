@@ -179,17 +179,17 @@
     </div>
     
     <!--Our Rooms-->
-    <h2 class = "mt-5 pt-4 mb-4 text-center fx-bold h-font ">OUR ROOMS</h2>
+    <h2 class = "mt-5 pt-4 mb-4 text-center fx-bold h-font ">Thông tin các phòng</h2>
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
                     <img src="images/rooms/1.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h5>Simple Room Name</h5>
+                        <h5>Phòng 1 người</h5>
                         <h6 class="mb-4">200.000VND/đêm</h6>
                         <div class="features mb-4">
-                            <h6 class="mb-1">Features</h6>
+                            <h6 class="mb-1">Đặc điểm</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
                             2 phòng
                             </span>
@@ -204,7 +204,7 @@
                             </span>
                         </div>
                         <div class="facilities mb-4">
-                            <h6 class="mb-1">Features</h6>
+                            <h6 class="mb-1">Đặc điểm khác</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
                             Wifi 
                             </span>
@@ -216,7 +216,7 @@
                             </span>
                         </div>
                         <div class="rating mb-4">
-                            <h6 class="mb-1">Rating</h6>
+                            <h6 class="mb-1">Đánh giá</h6>
                             <span class="badge rounded-pill bg-light">
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -236,10 +236,10 @@
                 <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
                     <img src="images/rooms/1.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h5>Simple Room Name</h5>
-                        <h6 class="mb-4">200.000VND/đêm</h6>
+                        <h5>Phòng 2 người</h5>
+                        <h6 class="mb-4">300.000VND/đêm</h6>
                         <div class="features mb-4">
-                            <h6 class="mb-1">Features</h6>
+                            <h6 class="mb-1">Đặc điểm</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
                             2 phòng
                             </span>
@@ -254,7 +254,7 @@
                             </span>
                         </div>
                         <div class="facilities mb-4">
-                            <h6 class="mb-1">Features</h6>
+                            <h6 class="mb-1">Đặc điểm khác</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
                             Wifi 
                             </span>
@@ -266,7 +266,7 @@
                             </span>
                         </div>
                         <div class="rating mb-4">
-                            <h6 class="mb-1">Rating</h6>
+                            <h6 class="mb-1">Đánh giá</h6>
                             <span class="badge rounded-pill bg-light">
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -286,10 +286,10 @@
                 <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
                     <img src="images/rooms/1.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h5>Simple Room Name</h5>
-                        <h6 class="mb-4">200.000VND/đêm</h6>
+                        <h5>Phòng 4 người</h5>
+                        <h6 class="mb-4">500.000VND/đêm</h6>
                         <div class="features mb-4">
-                            <h6 class="mb-1">Features</h6>
+                            <h6 class="mb-1">Đặc điểm</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
                             2 phòng
                             </span>
@@ -304,7 +304,7 @@
                             </span>
                         </div>
                         <div class="facilities mb-4">
-                            <h6 class="mb-1">Features</h6>
+                            <h6 class="mb-1">Đặc điểm khác</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
                             Wifi 
                             </span>
@@ -316,7 +316,7 @@
                             </span>
                         </div>
                         <div class="rating mb-4">
-                            <h6 class="mb-1">Rating</h6>
+                            <h6 class="mb-1">Đánh giá</h6>
                             <span class="badge rounded-pill bg-light">
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -333,7 +333,7 @@
                 </div>
             </div>
             <div class="col-lg-12 text-center mt-5">
-                <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Rooms>>></a>
+                <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">Các phòng khác>>></a>
                 
             </div>
         </div>
