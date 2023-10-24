@@ -1,1 +1,3 @@
-Nhánh master là project sau khi đã được duyệt nên không được push lên đây
+
+Pull project này về để code và chạy thử thoải mái, khi đó sẽ không ảnh hưởng đến nhánh master
+

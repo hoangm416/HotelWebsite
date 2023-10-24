@@ -339,6 +339,32 @@
         </div>
     </div>
 
+    <h2 class = "mt-5 pt-4 mb-4 text-center fx-bold h-font ">Dịch vụ</h2>
+
+    <div class = "container">
+        <div class = "row justify-content-evenly px-lg-0 px-md-0 px-5">
+            <div class = "col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                <img src = "https://itnow.vn/wp-content/uploads/2022/03/cach-mo-rong-vung-phu-song-wifi-luon-5-vach-cang-det-4.jpg" width = "100px" class = "mt-4">
+                <h5 class = "mt-md-3"> Wifi </h5>
+            </div>
+            <div class = "col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                <img src = "https://thenounproject.com/api/private/icons/5052787/edit/" width = "98px">
+                <h5 class = "mt-2"> Buffet sáng </h5>
+            </div>
+            <div class = "col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                <img src = "https://cdn-icons-png.flaticon.com/512/3621/3621198.png?ga=GA1.1.1652207904.1694049656" width = "85px">
+                <h5 class = "mt-md-4"> Bể bơi ngoài trời </h5>
+            </div>
+            <div class = "col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+                <img src = "https://cdn-icons-png.flaticon.com/512/3202/3202964.png" width = "100px">
+                <h5 class = "mt-md-2"> Xe đưa đón </h5>
+            </div>
+            <div class = "col-lg-2 col-md-2 btn btn-outline-dark text-center border-light rounded shadow py-4 my-3 ">
+                <h5 class = "mt-5 mt-sm-12"> Các dịch vụ khác <br> >>></h5>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
