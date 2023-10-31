@@ -186,12 +186,12 @@
                 <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
                     <img src="images/rooms/1.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h5>Phòng 1 người</h5>
-                        <h6 class="mb-4">200.000VND/đêm</h6>
+                        <h5>Phòng 2 người</h5>
+                        <h6 class="mb-4">400.000VND/đêm</h6>
                         <div class="features mb-4">
                             <h6 class="mb-1">Đặc điểm</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            2 phòng
+                            1 giường
                             </span>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
                             1 phòng tắm
@@ -200,7 +200,10 @@
                             1 ban công
                             </span>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            3 ghế sofa
+                            1 tủ lạnh mini
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Bàn + 3 ghế sofa
                             </span>
                         </div>
                         <div class="facilities mb-4">
@@ -236,12 +239,12 @@
                 <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
                     <img src="images/rooms/1.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h5>Phòng 2 người</h5>
-                        <h6 class="mb-4">300.000VND/đêm</h6>
+                        <h5>Phòng 3 người</h5>
+                        <h6 class="mb-4">500.000VND/đêm</h6>
                         <div class="features mb-4">
                             <h6 class="mb-1">Đặc điểm</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            2 phòng
+                            2 giường
                             </span>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
                             1 phòng tắm
@@ -250,7 +253,10 @@
                             1 ban công
                             </span>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            3 ghế sofa
+                            1 tủ lạnh mini
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Bàn + 3 ghế sofa
                             </span>
                         </div>
                         <div class="facilities mb-4">
@@ -287,11 +293,11 @@
                     <img src="images/rooms/1.jpg" class="card-img-top">
                     <div class="card-body">
                         <h5>Phòng 4 người</h5>
-                        <h6 class="mb-4">500.000VND/đêm</h6>
+                        <h6 class="mb-4">650.000VND/đêm</h6>
                         <div class="features mb-4">
                             <h6 class="mb-1">Đặc điểm</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            2 phòng
+                            2 giường
                             </span>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
                             1 phòng tắm
@@ -300,7 +306,10 @@
                             1 ban công
                             </span>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            3 ghế sofa
+                            1 tủ lạnh cỡ lớn
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Bàn + 4 ghế sofa
                             </span>
                         </div>
                         <div class="facilities mb-4">
@@ -426,8 +435,9 @@
     </script>
 </body>
 </html>
+
 <!-- Testimonials -->
-<h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Ðánh giá khách hàng</h2>
+<h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Ðánh giá của khách hàng</h2>
 <div class="container mt-5">
     <div class="swiper swiper-testimonials">
         <div class="swiper-wrapper mb-5">
