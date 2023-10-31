@@ -23,6 +23,26 @@
                 padding: 0 35px;
             }
         }
+
+        .custom-bg{
+            background-color: #2ec1ac;
+        }
+        .custom-bg:hover{
+            background-color: #279e8c;
+        }
+
+        .availablility-form{
+            margin-top: -50px;
+            z-index: 2;
+            position: relative;
+        }
+
+        @media screen and (max-width: 575px) {
+            .availablility-form{
+                margin-top: 25px;
+                padding: 0 35px;
+            }
+        }
     </style>
 </head>
 <body class="bg-light">
@@ -177,7 +197,52 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- check availability form -->
+
+    <div class="container availablility-form">
+        <div class=row>
+            <div class="col-lg-12 bg-white shadow p-4 rounder">
+                <h5 class="mb-4">Đặt phòng</h5>
+                <form>
+                    <div class="row align-items-end">
+                        <div class="col-lg-3 mb-3">
+                            <label class="form-label" style="font-weight: 500;">Nhận phòng</label>
+                            <input type="date" class="form-control shadow-none" >  
+                        </div>
+                        <div class="col-lg-3 mb-3">
+                            <label class="form-label" style="font-weight: 500;">Trả phòng</label>
+                            <input type="date" class="form-control shadow-none" >  
+                        </div>
+                        <div class="col-lg-3 mb-3">
+                        <label class="form-label" style="font-weight: 500;">Người lớn</label>
+                            <select class="form-select shadow-none">
+                                <option value="1">Một</option>
+                                <option value="2">Hai</option>
+                                <option value="3">Ba</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                        <label class="form-label" style="font-weight: 500;">Trẻ em</label>
+                            <select class="form-select shadow-none">
+                                <option value="1">Một</option>
+                                <option value="2">Hai</option>
+                                <option value="3">Ba</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-1 mb-lg-3 mt-2">
+                            <button type="submit" class="btn text-white shadow-none custom-bg">Hoàn tất</button>
+                        </div>
+                    </div>
+                </form>
+            </div> 
+        </div>
+    </div>
+
+
+<br><br><br>
+<br><br><br>
+
     <!--Our Rooms-->
     <h2 class = "mt-5 pt-4 mb-4 text-center fx-bold h-font ">Thông tin các phòng</h2>
     <div class="container">
