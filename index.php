@@ -365,6 +365,51 @@
         </div>
     </div>
 
+    <!-- Tìm chúng tôi -->
+    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">TÌM CHÚNG TÔI</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
+                <iframe class="w-100 rounded" height="320px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7449.419251202785!2d105.84588999999998!3d21.0042738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac768ffe1abd%3A0x22b136bcf1c08e2a!2zQsOhY2ggS2hvYSwgSGFpIELDoCBUcsawbmcsIEjDoCBO4buZaQ!5e0!3m2!1svi!2s!4v1698153719874!5m2!1svi!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="bg-white p-4 rounded mb-4">
+                    <h5>Liên hệ</h5>
+                    <a href="tel: +84123456789" class="d-inline-block mb-2 text-decoration-none text-dark">
+                      <i class="bi bi-telephone-fill"></i> +84123456789
+                    </a>
+                    <br>
+                    <a href="tel: +84123456789" class="d-inline-block text-decoration-none text-dark">
+                      <i class="bi bi-telephone-fill"></i> +84123456789
+                    </a>
+                </div>
+                <div class="bg-white p-4 rounded mb-4">
+                    <h5>Theo dõi</h5>
+                    <a href="#" class="d-inline-block mb-3">
+                      <span class="badge bg-light text-dark fs-6 p-2">
+                      <i class="bi bi-twitter-x"></i> X
+                      </span>
+                    </a>
+                    <br>
+                    <a href="#" class="d-inline-block mb-3">
+                      <span class="badge bg-light text-dark fs-6 p-2">
+                      <i class="bi bi-facebook"></i> Facebook
+                      </span>
+                    </a>
+                    <br>
+                    <a href="#" class="d-inline-block mb-3">
+                      <span class="badge bg-light text-dark fs-6 p-2">
+                      <i class="bi bi-instagram"></i> Instagram
+                      </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <br><br><br>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
@@ -376,6 +421,115 @@
       autoplay: {
         delay: 3500,
         disableOnInteraction: false,
+      }
+    });
+    </script>
+</body>
+</html>
+<!-- Testimonials -->
+<h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Ðánh giá khách hàng</h2>
+<div class="container mt-5">
+    <div class="swiper swiper-testimonials">
+        <div class="swiper-wrapper mb-5">
+
+            <div class="swiper-slide bg-white p-4">
+               <div class="profile d-flex align-items-center mb-3">
+                <img src="images/features/star.svg" width="30px">
+                <h6 class="m-0 ms-2">Người dùng 69</h6>
+               </div>
+               <p>
+               Tôi rất hài lòng về dịch vụ phục vụ chu đáo và nụ cười niềm nở của nhân viên tại khách sạn này, đây quả là một trong những khách sạn tốt nhất tôi từng ở.
+               </p>
+               <div class="rating"></div>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i> 
+            </div>
+            <div class="swiper-slide bg-white p-4">
+               <div class="profile d-flex align-items-center mb-3">
+                <img src="images/features/star.svg" width="30px">
+                <h6 class="m-0 ms-2">Người dùng 420</h6>
+               </div>
+               <p>
+               Khách sạn này mang đến những trải nghiệm ở nơi nghỉ ngơi tuyệt vời. Phòng rộng rãi sạch sẽ, cảnh quan xanh mát, và đặc biệt là nhân viên phục vụ rất nhiệt tình, luôn sẵn lòng hỗ trợ khách hàng mọi yêu cầu. Tôi sẽ cân nhắc lựa chọn khách sạn này nếu lại ghé qua vùng này trong tương lai.
+               </p>
+               <div class="rating"></div>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i> 
+            </div>
+            <div class="swiper-slide bg-white p-4">
+               <div class="profile d-flex align-items-center mb-3">
+                <img src="images/features/star.svg" width="30px">
+                <h6 class="m-0 ms-2">Người dùng 666</h6>
+               </div>
+               <p>
+               Tôi không thể nhắc đến khách sạn này mà không nói lên sự hài lòng của mình. Ngôi khách sạn có vị trí đắc địa với view hướng biển rất đẹp. Dịch vụ ở đây chuyên nghiệp và trách nhiệm, đặc biệt là thái độ nhiệt tình, vui vẻ của nhân viên bốc xếp hành lý khi tôi đến và đi. Tôi sẽ chia sẻ khách sạn này với bạn bè và mong trở lại trong tương lai.
+               </p>
+               <div class="rating"></div>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i> 
+            </div>
+
+         <div>
+            <div class="swiper-pagination"></div>
+        </div>
+     </div>
+
+<div>
+<br><br><br>
+<br><br><br>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script>
+    var swiper = new Swiper(".swiper-container", {
+      spaceBetween: 30,
+      effect: "fade",
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      }
+    });
+    var swiper = new Swiper(".swiper-testimonials", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      slidesPerView: "3",
+      loop: true,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        640: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 3,
+        }
       }
     });
     </script>
