@@ -62,7 +62,7 @@
                 <a class="nav-link me-2" href="#">Phòng</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link me-2" href="#">Tiện ích</a>
+                <a class="nav-link me-2" href="facilities.php">Tiện ích</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link me-2" href="#">Liên hệ</a>
