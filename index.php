@@ -62,7 +62,7 @@
                 <a class="nav-link me-2" href="#">Phòng</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link me-2" href="#">Tiện ích</a>
+                <a class="nav-link me-2" href="facilities.php">Tiện ích</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link me-2" href="#">Liên hệ</a>
@@ -250,12 +250,12 @@
                 <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
                     <img src="images/rooms/1.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h5>Phòng 1 người</h5>
-                        <h6 class="mb-4">200.000VND/đêm</h6>
+                        <h5>Phòng 2 người</h5>
+                        <h6 class="mb-4">400.000VND/đêm</h6>
                         <div class="features mb-4">
                             <h6 class="mb-1">Đặc điểm</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            2 phòng
+                            1 giường
                             </span>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
                             1 phòng tắm
@@ -264,7 +264,10 @@
                             1 ban công
                             </span>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            3 ghế sofa
+                            1 tủ lạnh mini
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Bàn + 3 ghế sofa
                             </span>
                         </div>
                         <div class="facilities mb-4">
@@ -300,12 +303,12 @@
                 <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
                     <img src="images/rooms/1.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h5>Phòng 2 người</h5>
-                        <h6 class="mb-4">300.000VND/đêm</h6>
+                        <h5>Phòng 3 người</h5>
+                        <h6 class="mb-4">500.000VND/đêm</h6>
                         <div class="features mb-4">
                             <h6 class="mb-1">Đặc điểm</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            2 phòng
+                            2 giường
                             </span>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
                             1 phòng tắm
@@ -314,7 +317,10 @@
                             1 ban công
                             </span>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            3 ghế sofa
+                            1 tủ lạnh mini
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Bàn + 3 ghế sofa
                             </span>
                         </div>
                         <div class="facilities mb-4">
@@ -351,11 +357,11 @@
                     <img src="images/rooms/1.jpg" class="card-img-top">
                     <div class="card-body">
                         <h5>Phòng 4 người</h5>
-                        <h6 class="mb-4">500.000VND/đêm</h6>
+                        <h6 class="mb-4">650.000VND/đêm</h6>
                         <div class="features mb-4">
                             <h6 class="mb-1">Đặc điểm</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            2 phòng
+                            2 giường
                             </span>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
                             1 phòng tắm
@@ -364,7 +370,10 @@
                             1 ban công
                             </span>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            3 ghế sofa
+                            1 tủ lạnh cỡ lớn
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            Bàn + 4 ghế sofa
                             </span>
                         </div>
                         <div class="facilities mb-4">
@@ -551,6 +560,70 @@
     </script>
 </body>
 </html>
+<<<<<<< HEAD
+=======
+
+<!-- Testimonials -->
+<h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Ðánh giá của khách hàng</h2>
+<div class="container mt-5">
+    <div class="swiper swiper-testimonials">
+        <div class="swiper-wrapper mb-5">
+
+            <div class="swiper-slide bg-white p-4">
+               <div class="profile d-flex align-items-center mb-3">
+                <img src="images/features/star.svg" width="30px">
+                <h6 class="m-0 ms-2">Người dùng 69</h6>
+               </div>
+               <p>
+               Tôi rất hài lòng về dịch vụ phục vụ chu đáo và nụ cười niềm nở của nhân viên tại khách sạn này, đây quả là một trong những khách sạn tốt nhất tôi từng ở.
+               </p>
+               <div class="rating"></div>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i> 
+            </div>
+            <div class="swiper-slide bg-white p-4">
+               <div class="profile d-flex align-items-center mb-3">
+                <img src="images/features/star.svg" width="30px">
+                <h6 class="m-0 ms-2">Người dùng 420</h6>
+               </div>
+               <p>
+               Khách sạn này mang đến những trải nghiệm ở nơi nghỉ ngơi tuyệt vời. Phòng rộng rãi sạch sẽ, cảnh quan xanh mát, và đặc biệt là nhân viên phục vụ rất nhiệt tình, luôn sẵn lòng hỗ trợ khách hàng mọi yêu cầu. Tôi sẽ cân nhắc lựa chọn khách sạn này nếu lại ghé qua vùng này trong tương lai.
+               </p>
+               <div class="rating"></div>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i> 
+            </div>
+            <div class="swiper-slide bg-white p-4">
+               <div class="profile d-flex align-items-center mb-3">
+                <img src="images/features/star.svg" width="30px">
+                <h6 class="m-0 ms-2">Người dùng 666</h6>
+               </div>
+               <p>
+               Tôi không thể nhắc đến khách sạn này mà không nói lên sự hài lòng của mình. Ngôi khách sạn có vị trí đắc địa với view hướng biển rất đẹp. Dịch vụ ở đây chuyên nghiệp và trách nhiệm, đặc biệt là thái độ nhiệt tình, vui vẻ của nhân viên bốc xếp hành lý khi tôi đến và đi. Tôi sẽ chia sẻ khách sạn này với bạn bè và mong trở lại trong tương lai.
+               </p>
+               <div class="rating"></div>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i> 
+            </div>
+
+         <div>
+            <div class="swiper-pagination"></div>
+        </div>
+     </div>
+
+<div>
+<br><br><br>
+<br><br><br>
+>>>>>>> 1dbe57ea0ae1b66f409f3d96a9a53797a8cd9751
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
