@@ -68,7 +68,7 @@
                 <a class="nav-link me-2" href="#">Liên hệ</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Về chúng tôi</a>
+                <a class="nav-link" href="about.php">Về chúng tôi</a>
                 </li>
                 
             </ul>
