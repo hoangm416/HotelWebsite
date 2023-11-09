@@ -65,7 +65,7 @@
                 <a class="nav-link me-2" href="facilities.php">Tiện ích</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link me-2" href="#">Liên hệ</a>
+                <a class="nav-link me-2" href="contact.php">Liên hệ</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="about.php">Về chúng tôi</a>
@@ -282,6 +282,12 @@
                             Máy sưởi
                             </span>
                         </div>
+                        <div class="guests mb-4">
+                            <h6 class="mb-1">Khách</h6>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            2 Người lớn
+                            </span>
+                        </div>
                         <div class="rating mb-4">
                             <h6 class="mb-1">Đánh giá</h6>
                             <span class="badge rounded-pill bg-light">
@@ -333,6 +339,15 @@
                             </span>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
                             Máy sưởi
+                            </span>
+                        </div>
+                        <div class="guests mb-4">
+                            <h6 class="mb-1">Khách</h6>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            2 Người lớn
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            1 Trẻ em
                             </span>
                         </div>
                         <div class="rating mb-4">
@@ -388,6 +403,16 @@
                             Máy sưởi
                             </span>
                         </div>
+                        <div class="guests mb-4">
+                            <h6 class="mb-1">Khách</h6>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            2 Người lớn
+                            </span>
+                            <span class="badge rounded-pill text-dark text-wrap bg-light">
+                            2 Trẻ em
+                            </span>
+                        </div>
+                        <div class =
                         <div class="rating mb-4">
                             <h6 class="mb-1">Đánh giá</h6>
                             <span class="badge rounded-pill bg-light">
