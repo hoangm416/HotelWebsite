@@ -42,15 +42,15 @@
                                 <h5 class="mb-3" style="font-size: 18px;">Tiện nghi</h5>
                                 <div class="mb-2">
                                     <input type="checkbox" id="f1" class="form-check-input shadow-none me-1">
-                                    <label class="form-check-label" for="f1">Tiện nghi một</label>
+                                    <label class="form-check-label" for="f1">Tivi</label>
                                 </div>
                                 <div class="mb-2">
                                     <input type="checkbox" id="f2" class="form-check-input shadow-none me-1">
-                                    <label class="form-check-label" for="f2">Tiện nghi hai</label>
+                                    <label class="form-check-label" for="f2">Tủ lạnh</label>
                                 </div>
                                 <div class="mb-2">
                                     <input type="checkbox" id="f3" class="form-check-input shadow-none me-1">
-                                    <label class="form-check-label" for="f3">Tiện nghi ba</label>
+                                    <label class="form-check-label" for="f3">Điều hòa</label>
                                 </div>
                             </div>
                             <div class="border bg-light p-3 rounded mb-3">
@@ -79,7 +79,7 @@
                         <img src="images/rooms/1.jpg" class="img-fluid rounded" alt="...">
                     </div>
                     <div class="col-md-5 px-lg-3 px-md-3 px-0">
-                        <h5 class="mb-3">Simple Room Name</h5>
+                        <h5 class="mb-3">Phòng 2 người</h5>
                         <div class="features mb-3">
                             <h6 class="mb-1">Đặc điểm</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
@@ -130,7 +130,7 @@
                         <img src="images/rooms/1.jpg" class="img-fluid rounded" alt="...">
                     </div>
                     <div class="col-md-5 px-lg-3 px-md-3 px-0">
-                        <h5 class="mb-3">Simple Room Name</h5>
+                        <h5 class="mb-3">Phòng 3 người</h5>
                         <div class="features mb-3">
                             <h6 class="mb-1">Đặc điểm</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
@@ -169,7 +169,7 @@
                         </div>
                     </div>
                     <div class="col-md-2 text-center">
-                        <h6 class="mb-4">400.000VND/đêm</h6>
+                        <h6 class="mb-4">500.000VND/đêm</h6>
                         <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Đặt phòng</a>
                         <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none" >Thông tin chi tiết</a>
                     </div>
@@ -181,7 +181,7 @@
                         <img src="images/rooms/1.jpg" class="img-fluid rounded" alt="...">
                     </div>
                     <div class="col-md-5 px-lg-3 px-md-3 px-0">
-                        <h5 class="mb-3">Simple Room Name</h5>
+                        <h5 class="mb-3">Phòng 4 người</h5>
                         <div class="features mb-3">
                             <h6 class="mb-1">Đặc điểm</h6>
                             <span class="badge rounded-pill text-dark text-wrap bg-light">
@@ -220,7 +220,7 @@
                         </div>
                     </div>
                     <div class="col-md-2 text-center">
-                        <h6 class="mb-4">400.000VND/đêm</h6>
+                        <h6 class="mb-4">650.000VND/đêm</h6>
                         <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Đặt phòng</a>
                         <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none" >Thông tin chi tiết</a>
                     </div>

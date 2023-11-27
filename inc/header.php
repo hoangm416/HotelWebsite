@@ -10,7 +10,7 @@
                 <a class="nav-link active me-2" aria-current="page" href="#">Trang chủ</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link me-2" href="#">Phòng</a>
+                <a class="nav-link me-2" href="rooms.php">Phòng</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link me-2" href="facilities.php">Tiện ích</a>
