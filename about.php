@@ -79,8 +79,8 @@
             <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
                 <div class="swiper-wrapper mb-5" id="swiper-wrapper-dc64d9daf684fd29" aria-live="polite">
                     <div class="swiper-slide swiper-slide-active bg-white text-center overflow-hidden rounded" role="group" aria-label="1 / 8" style="width: 888px;">
-                        <img src="https://t3.ftcdn.net/jpg/00/57/04/58/240_F_57045887_HHJml6DJVxNBMqMeDqVJ0ZQDnotp5rGD.jpg" class="w-100">
-                        <h5 class="mt-2">Random Name</h5>
+                        <img src="https://phunuvietnam.mediacdn.vn/179072216278405120/2023/2/22/2896938215820159432808032102006602626651935n-1677062931040801469308.jpg" class="w-100">
+                        <h5 class="mt-2">Sơn Tùng MTP</h5>
                     </div>
 
                     <div class="swiper-slide swiper-slide-active bg-white text-center overflow-hidden rounded" role="group" aria-label="2 / 8" style="width: 888px;">
@@ -104,8 +104,8 @@
                     </div>
 
                     <div class="swiper-slide swiper-slide-active bg-white text-center overflow-hidden rounded" role="group" aria-label="6 / 8" style="width: 888px;">
-                        <img src="https://t3.ftcdn.net/jpg/00/57/04/58/240_F_57045887_HHJml6DJVxNBMqMeDqVJ0ZQDnotp5rGD.jpg" class="w-100">
-                        <h5 class="mt-2">Random Name</h5>
+                        <img src="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Son_Tung_M-TP_1_(2017).png" class="w-100">
+                        <h5 class="mt-2">Sơn Tùng MTP</h5>
                     </div>
 
                     <div class="swiper-slide swiper-slide-active bg-white text-center overflow-hidden rounded" role="group" aria-label="7 / 8" style="width: 888px;">
@@ -154,6 +154,8 @@
                 }
             });
         </script>
+
+        <?php require('inc/footer.php'); ?>
     </body>
 </html>
 

@@ -279,7 +279,6 @@
                             2 Trẻ em
                             </span>
                         </div>
-                        <div class =
                         <div class="rating mb-4">
                             <h6 class="mb-1">Đánh giá</h6>
                             <span class="badge rounded-pill bg-light">
@@ -435,6 +434,8 @@
             </div>
         </div>
     </div>
+
+    <?php require('inc/footer.php'); ?>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
