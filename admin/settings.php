@@ -65,8 +65,7 @@
                         </form>            
                     </div>
             </div>
-                    </div>
-            </div>
+
 
             <!-- Contact details section -->
             <div class="card border-0 shadow-sm mb-4">
