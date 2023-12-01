@@ -45,4 +45,17 @@
     echo $res;
     }
 
+
+    if(isset($_POST['add_member'])) {
+        $frm_data = filteration($_POST);
+
+        $img_r = uploadImage($_FILES['picture'],ABOUT_FOLDER);
+
+        if ($img_r == 'inv_img' || $img_r == 'inv_size' || $img_r == 'upd_failed') {
+            echo $img_r;
+        }
+        else {
+
+        }
+    }
 ?>
