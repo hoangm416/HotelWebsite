@@ -209,7 +209,18 @@
                     </div>
 
                     <div class="row" id = "team-data">
-
+                        <div class="col-md-2 mb-3">
+                            <div class="card bg-dark text-white">
+                                <img src="../images/about/hotel.svg" class="card-img">
+                                <div class="card-img-overlay text-end">
+                                    <button type="button" class="btn btn-danger btn-sm shadow-none" >
+                                        <i class="bi bi-trash"></i> Xóa
+                                    </button>
+                                </div>
+                                
+                                <p class="card-text text-center px-3 py-2"><small>Random Name</small></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -403,22 +414,38 @@
         xhr.open("POST", "ajax/settings_crud.php", true);
         
         xhr.onload=function(){
+            var myModal = document.getElementById('team-s');
+            var modal = bootstrap.Modal.getInstance(myModal);
+            modal.hide();
 
-            // var myModal = document.getElementById('general-s');
-            // var modal = bootstrap.Modal.getInstance(myModal);
-            // modal.hide();
-
-            // if(this.responseText == 1)
-            // {
-            //     alert('thành công', 'Thay đổi đã được lưu!');
-            //     get_general();
-            // }
-            // else
-            // {
-            //     alert('lỗi', 'Không thay đổi!');
-            // }
+            if (this.response == 'inv_img') {
+                alert('error','Định dạng ảnh không được chấp nhận, vui lòng đổi định dạng khác!');
+            }
+            else if (this.response == 'inv_size') {
+                alert('error','Vui lòng chọn ảnh có kích thước dưới 2MB!');
+            }
+            else if (this.response == 'upd_failed') {
+                alert('error','Hệ thống lỗi, vui lòng thử lại sau!');
+            }
+            else {
+                alert('success','Đã thêm nhân viên mới!');
+                member_name_inp.value = '';
+                member_picture_inp.value = '';
+            }
         }
         xhr.send(data);
+    }
+
+    function get_members() {
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST","ajax/settings_crud.php",true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        xhr.onload=function(){
+            
+        }
+
+        xhr.send('get_members'); 
     }
 
     window.onload = function(){
