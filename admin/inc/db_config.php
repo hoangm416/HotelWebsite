@@ -23,6 +23,12 @@
         return $data;
     }
 
+    function selectAll($table) {
+        $con = $GLOBALS['con'];
+        $res = mysqli_query($con, "SELECT * FROM $table");
+        return $res;
+    }
+
     function select($sql, $values, $datatypes)
     {
         $con = $GLOBALS['con'];
@@ -80,6 +86,26 @@
         }
         else {
             die("Câu truy vấn select không thực hiện được - Thêm");
+        }
+    }
+
+    function delete($sql, $values, $datatypes)
+    {
+        $con = $GLOBALS['con'];
+        if ($statement = mysqli_prepare($con, $sql)) {
+            mysqli_stmt_bind_param($statement, $datatypes, ...$values);
+            if (mysqli_stmt_execute($statement)) {
+                $res = mysqli_stmt_affected_rows($statement);
+                mysqli_stmt_close($statement);
+                return $res;
+            }
+            else {
+                mysqli_stmt_close($statement);
+                die("Câu truy vấn không thực hiện được - Xóa");
+            }
+        }
+        else {
+            die("Câu truy vấn không thực hiện được - Xóa");
         }
     }
 ?>

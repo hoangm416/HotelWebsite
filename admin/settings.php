@@ -431,6 +431,7 @@
                 alert('success','Đã thêm nhân viên mới!');
                 member_name_inp.value = '';
                 member_picture_inp.value = '';
+                get_members();
             }
         }
         xhr.send(data);
@@ -442,15 +443,34 @@
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
         xhr.onload=function(){
-            
+            document.getElementById('team-data').innerHTML = this.responseText;
         }
 
         xhr.send('get_members'); 
     }
 
+    function rem_member(val) {
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST","ajax/settings_crud.php",true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        xhr.onload=function(){
+            if (this.response==1) {
+                alert('success','Xóa thành công!');
+                get_members();
+            }
+            else {
+                alert('error','Hệ thống lỗi, vui lòng thử lại!');
+            }
+        }
+
+        xhr.send('rem_member='+val);
+    }
+
     window.onload = function(){
     get_general();
     get_contacts();
+    get_members();
     }
     </script>
 </body>
