@@ -19,11 +19,10 @@
                     <a class="nav-link text-white" href="rooms.php">Phòng</a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
                     <a class="nav-link text-white" href="carousel.php">Carousel</a>
-=======
-                    <a class="nav-link text-white" href="user_queries.php">Người dùng</a>
->>>>>>> a48bae5ec5e2ddeae8f1b5277bc59c5aa2ce22cf
+                </li>
+                <li>
+                    <a class="nav-link text-white" href="user_queries.php">Phản hồi</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="settings.php">Cài đặt</a>
