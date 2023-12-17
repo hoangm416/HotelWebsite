@@ -157,13 +157,13 @@ function add_member() {
         var modal = bootstrap.Modal.getInstance(myModal);
         modal.hide();
 
-        if (this.response == 'inv_img') {
+        if (this.responseText == 'inv_img') {
             alert('error','Định dạng ảnh không được chấp nhận, vui lòng đổi định dạng khác!');
         }
-        else if (this.response == 'inv_size') {
+        else if (this.responseText == 'inv_size') {
             alert('error','Vui lòng chọn ảnh có kích thước dưới 2MB!');
         }
-        else if (this.response == 'upd_failed') {
+        else if (this.responseText == 'upd_failed') {
             alert('error','Hệ thống lỗi, vui lòng thử lại sau!');
         }
         else {
