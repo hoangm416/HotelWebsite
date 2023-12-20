@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 17, 2023 lúc 08:09 AM
+-- Thời gian đã tạo: Th12 20, 2023 lúc 09:34 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -35,6 +35,16 @@ CREATE TABLE `room_images` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Đang đổ dữ liệu cho bảng `room_images`
+--
+
+INSERT INTO `room_images` (`sr_no`, `room_id`, `image`, `thumb`) VALUES
+(17, 10, 'IMG_188png', 0),
+(18, 10, 'IMG_319png', 1),
+(19, 11, 'IMG_312png', 1),
+(20, 11, 'IMG_674png', 0);
+
+--
 -- Chỉ mục cho các bảng đã đổ
 --
 
@@ -53,7 +63,7 @@ ALTER TABLE `room_images`
 -- AUTO_INCREMENT cho bảng `room_images`
 --
 ALTER TABLE `room_images`
-  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

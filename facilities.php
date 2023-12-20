@@ -40,53 +40,6 @@
                     data;
                 } 
             ?>
-
-
-            <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
-                    <div class="d-flex align-items-center mb-2">
-                        <img src = "https://itnow.vn/wp-content/uploads/2022/03/cach-mo-rong-vung-phu-song-wifi-luon-5-vach-cang-det-4.jpg" width="40px">
-                        <h5 class = "m-0 ms-3">Wifi</h5>
-                    </div>
-                    <p>Lorem sssssssssssssssssssssssssss<br>sssssssssaaaaaaaa</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
-                    <div class="d-flex align-items-center mb-2">
-                        <img src = "https://itnow.vn/wp-content/uploads/2022/03/cach-mo-rong-vung-phu-song-wifi-luon-5-vach-cang-det-4.jpg" width="40px">
-                        <h5 class = "m-0 ms-3">Wifi</h5>
-                    </div>
-                    <p>Lorem sssssssssssssssssssssssssss<br>sssssssssaaaaaaaa</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
-                    <div class="d-flex align-items-center mb-2">
-                        <img src = "https://itnow.vn/wp-content/uploads/2022/03/cach-mo-rong-vung-phu-song-wifi-luon-5-vach-cang-det-4.jpg" width="40px">
-                        <h5 class = "m-0 ms-3">Wifi</h5>
-                    </div>
-                    <p>Lorem sssssssssssssssssssssssssss<br>sssssssssaaaaaaaa</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
-                    <div class="d-flex align-items-center mb-2">
-                        <img src = "https://itnow.vn/wp-content/uploads/2022/03/cach-mo-rong-vung-phu-song-wifi-luon-5-vach-cang-det-4.jpg" width="40px">
-                        <h5 class = "m-0 ms-3">Wifi</h5>
-                    </div>
-                    <p>Lorem sssssssssssssssssssssssssss<br>sssssssssaaaaaaaa</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
-                    <div class="d-flex align-items-center mb-2">
-                        <img src = "https://itnow.vn/wp-content/uploads/2022/03/cach-mo-rong-vung-phu-song-wifi-luon-5-vach-cang-det-4.jpg" width="40px">
-                        <h5 class = "m-0 ms-3">Wifi</h5>
-                    </div>
-                    <p>Lorem sssssssssssssssssssssssssss<br>sssssssssaaaaaaaa</p>
-                </div>
-            </div>
         </div>
     </div>
 

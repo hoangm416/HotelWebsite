@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 17, 2023 lúc 08:10 AM
+-- Thời gian đã tạo: Th12 20, 2023 lúc 09:33 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -40,8 +40,9 @@ CREATE TABLE `facilities` (
 
 INSERT INTO `facilities` (`id`, `icon`, `name`, `description`) VALUES
 (14, 'IMG_64076.svg', 'Wifi', 'Noti'),
-(15, 'IMG_31444.svg', 'Spa', 'Notoi'),
-(16, 'IMG_93967.svg', 'Air conditioner', 'No');
+(16, 'IMG_93967.svg', 'Air conditioner', 'No'),
+(19, 'IMG_91225.svg', 'Spa', 'a'),
+(20, 'IMG_77543.svg', 'Undefined', 'Undefined');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -61,7 +62,7 @@ ALTER TABLE `facilities`
 -- AUTO_INCREMENT cho bảng `facilities`
 --
 ALTER TABLE `facilities`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

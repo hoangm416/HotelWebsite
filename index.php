@@ -202,130 +202,6 @@
 
                 ?>
 
-            <div class="col-lg-4 col-md-6 my-3">
-                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                    <img src="images/rooms/1.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Phòng 3 người</h5>
-                        <h6 class="mb-4">500.000VND/đêm</h6>
-                        <div class="features mb-4">
-                            <h6 class="mb-1">Đặc điểm</h6>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            2 giường
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            1 phòng tắm
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            1 ban công
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            1 tủ lạnh mini
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            Bàn + 3 ghế sofa
-                            </span>
-                        </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1">Đặc điểm khác</h6>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            Wifi 
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            Tivi 
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            Máy sưởi
-                            </span>
-                        </div>
-                        <div class="guests mb-4">
-                            <h6 class="mb-1">Khách</h6>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            2 Người lớn
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            1 Trẻ em
-                            </span>
-                        </div>
-                        <div class="rating mb-4">
-                            <h6 class="mb-1">Đánh giá</h6>
-                            <span class="badge rounded-pill bg-light">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>  
-                            </span>
-                           
-                        </div>
-                        <div class="d-flex justify-content-evenly mb-2">
-                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Đặt phòng</a>
-                            <a href="#" class="btn btn-sm btn-outline-dark shadow-none" >Thông tin chi tiết</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 my-3">
-                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                    <img src="images/rooms/1.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Phòng 4 người</h5>
-                        <h6 class="mb-4">650.000VND/đêm</h6>
-                        <div class="features mb-4">
-                            <h6 class="mb-1">Đặc điểm</h6>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            2 giường
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            1 phòng tắm
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            1 ban công
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            1 tủ lạnh cỡ lớn
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            Bàn + 4 ghế sofa
-                            </span>
-                        </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1">Đặc điểm khác</h6>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            Wifi 
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            Tivi 
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            Máy sưởi
-                            </span>
-                        </div>
-                        <div class="guests mb-4">
-                            <h6 class="mb-1">Khách</h6>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            2 Người lớn
-                            </span>
-                            <span class="badge rounded-pill text-dark text-wrap bg-light">
-                            2 Trẻ em
-                            </span>
-                        </div>
-                        <div class="rating mb-4">
-                            <h6 class="mb-1">Đánh giá</h6>
-                            <span class="badge rounded-pill bg-light">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>  
-                            </span>
-                           
-                        </div>
-                        <div class="d-flex justify-content-evenly mb-2">
-                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Đặt phòng</a>
-                            <a href="#" class="btn btn-sm btn-outline-dark shadow-none" >Thông tin chi tiết</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-12 text-center mt-5">
                 <a href="rooms.php" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">Các phòng khác>>></a>
                 
@@ -342,7 +218,7 @@
                 while ($row = mysqli_fetch_assoc($res)) {
                     echo<<<data
                         <div class = "col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                            <img src = "$path$row[icon]" width = "50px" class = "mt-4">
+                            <img src = "http://localhost:3000/HotelWebsite/images/facilities/$row[icon]" width = "50px" class = "mt-4">
                             <h5 class = "mt-md-3">$row[name]</h5>
                         </div>
                     data;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 17, 2023 lúc 08:09 AM
+-- Thời gian đã tạo: Th12 20, 2023 lúc 09:34 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -38,8 +38,8 @@ CREATE TABLE `rooms_facilities` (
 --
 
 INSERT INTO `rooms_facilities` (`sr_no`, `room_id`, `facilities_id`) VALUES
-(20, 10, 15),
-(21, 11, 16);
+(22, 10, 14),
+(23, 11, 16);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -61,7 +61,7 @@ ALTER TABLE `rooms_facilities`
 -- AUTO_INCREMENT cho bảng `rooms_facilities`
 --
 ALTER TABLE `rooms_facilities`
-  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

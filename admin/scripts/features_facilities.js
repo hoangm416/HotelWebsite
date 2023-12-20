@@ -74,7 +74,6 @@ function add_facility() {
     data.append('name', facility_s_form.elements['facility_name'].value);
     data.append('icon', facility_s_form.elements['facility_icon'].files[0]);
     data.append('desc', facility_s_form.elements['facility_desc'].value);
-
     data.append('add_facility','');
 
     let xhr = new XMLHttpRequest();
