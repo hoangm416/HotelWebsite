@@ -1,52 +1,48 @@
-<div class="container-fluid bg-dark mt-5">
+<div class="container-fluid bg-white mt-5">
     <div class="row">
-        <div class="col-lg-6 p-3">
-            <h3 class="h-font fw-bold text-white fs-3 mb-2">BK Hotel</h3>
-            <p class="text-white">Khách sạn Bách Khoa sẽ mang đến cho quý khách sự thoải mái và hài lòng 
+        <div class="col-lg-4 p-4">
+            <h3 class="h-font fw-bold fs-3 mb-2">BK Hotel</h3>
+            <p>
+                Khách sạn Bách Khoa sẽ mang đến cho quý khách sự thoải mái và hài lòng 
                 bởi tính chuyên nghiệp và thân thiện của đội ngũ nhân viên.
                 Với giá cả phải chăng và vị trí thuận tiện là địa chỉ tin cậy cho 
                 khách du lịch và các doanh nhân trong nước.
             </p>
         </div>
-        <div class="col-lg-6 p-3">
-            <h3 class="h-font fw-bold text-white fs-3 mb-2">Thành tích</h3>
-            <p class="text-white">Top 10 khách sạn tốt nhất thành phố Hà Nội, top 30 khách sạn
-                tốt nhất miền Bắc, khách sạn có bể bơi đẹp nhất Hà Nội, ...
-            </p>
-        </div>
+
         <div class="col-lg-4 p-4">
-            <h5 class="mb-3">Links</h5>
-            <a href="home.php" class="d-inline-block mb-2 text-dark text-decoration-none">Home</a> <br> 
-            <a href="rooms.php" class="d-inline-block mb-2 text-dark text-decoration-none">Rooms</a> <br>
-            <a href="facilities.php" class="d-inline-block mb-2 text-dark text-decoration-none">Facilities</a> <br> 
-            <a href="contact.php" class="d-inline-block mb-2 text-dark text-decoration-none">Contact us</a> <br> 
-            <a href="about.php" class="d-inline-block mb-2 text-dark text-decoration-none">About</a> 
+            <h5 class="mb-3">Liên kết</h5>
+            <a href="home.php" class="d-inline-block mb-2 text-dark text-decoration-none">Trang chủ</a> <br> 
+            <a href="rooms.php" class="d-inline-block mb-2 text-dark text-decoration-none">Phòng</a> <br>
+            <a href="facilities.php" class="d-inline-block mb-2 text-dark text-decoration-none">Tiện ích</a> <br> 
+            <a href="contact.php" class="d-inline-block mb-2 text-dark text-decoration-none">Liên hệ</a> <br> 
+            <a href="about.php" class="d-inline-block mb-2 text-dark text-decoration-none">Về chúng tôi</a> 
         </div>
         <div class="col-lg-4 p-4">
             <h5 class="mb-3">Follow us</h5>
-            <?php
+            <!-- <?php
              if($contact_r['fb']!=''){
                 echo<<<data
                     <a href="$contact_r[x] " class="d-inline-block text-dark text-decoration-none mb-2">
                      <i class="bi bi-x me-1"></i> X
                     </a><br>
-            data;
+                data;
              } 
-             ?>
+             ?> -->
             
             <a href="<?php echo $contact_r['fb'] ?>" class="d-inline-block text-dark text-decoration-none mb-2">
              <i class="bi bi-facebook me-1"></i> Facebook
             </a><br>
             <a href="<?php echo $contact_r['insta'] ?>" class="d-inline-block text-dark text-decoration-none ">
-             <i class="bi bi-instagram-1"></i> Instagram
+             <i class="bi bi-instagram me-1"></i> Instagram
             </a><br>
 
     </div>
 </div>
 
-<h6 class="text-center bg-dark text-white p-3 m-8">hehe</h6>
+<h6 class="text-center bg-dark text-white p-3 m-8">Nhóm 12</h6>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity=""
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <script>
     function setActive(){
@@ -65,4 +61,52 @@
     }
     setActive();
 
+</script>
+
+<script>
+
+    let register_form = document.getElementById('register_form');
+    
+    register_form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        
+        let data = new FormData();
+        data.append('name', register_form.elements['name'].value);
+        data.append('pincode', register_form.elements['pincode'].value);
+        data.append('phonenum', register_form.elements['phonenum'].value);
+        data.append('profile', register_form.elements['profile'].files[0]);
+        data.append('address', register_form.elements['address'].value);
+        data.append('dob', register_form.elements['dob'].value);
+        data.append('email', register_form.elements['email'].value);
+        data.append('pass', register_form.elements['pass'].value);
+        data.append('cpass', register_form.elements['cpass'].value);
+        data.append('register', '');
+
+        var myModal = document.getElementById('registerModal');
+        var modal = bootstrap.Modal.getInstance(myModal);
+        modal.hide();
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "ajax/login_register.php", true);
+
+        xhr.onload = function() {
+            if(this.responseText == 'Mật khẩu không khớp')
+                alert('error', 'Mật khẩu không khớp');
+            else if(this.responseText == 'Email đã tồn tại')
+                alert('error', 'Email này đã được đăng ký');
+            else if(this.responseText == 'SDT đã tồn tại')
+                alert('error', 'SDT này đã được đăng ký');
+            else if(this.responseText == 'Ảnh không hợp lệ')
+                alert('error', 'Chỉ những định dạng jpeg, png được chấp nhận');
+            else if(this.responseText == 'Đẩy ảnh thất bại')
+                alert('error', 'Tải ảnh lên thất bại');
+            else if(this.responseText == 'Thêm dữ liệu thất bại')
+                alert('error', 'Đăng ký thất bại');
+            else {
+                alert('success', 'Đăng ký tài khoản thành công');
+                register_form.reset();
+            }
+        }
+        xhr.send(data);
+    })
 </script>
