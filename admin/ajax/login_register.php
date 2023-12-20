@@ -21,32 +21,32 @@
             exit;
         }
 
-        // đẩy ảnh chân dung lên server
-        $img = uploadUserImage($_FILES['profile']);
-        if ($img == 'Ảnh không hợp lệ') {
-            echo 'Ảnh không hợp lệ';
-            exit;
-        }
-        else if ($img == 'Đẩy ảnh thất bại') {
-            echo 'Đẩy ảnh thất bại';
-            exit;
-        }
+        // // đẩy ảnh chân dung lên server
+        // $img = uploadUserImage($_FILES['profile']);
+        // if ($img == 'Ảnh không hợp lệ') {
+        //     echo 'Ảnh không hợp lệ';
+        //     exit;
+        // }
+        // else if ($img == 'Đẩy ảnh thất bại') {
+        //     echo 'Đẩy ảnh thất bại';
+        //     exit;
+        // }
 
-        // xác thực tài khoản
-        $token = bin2hex(random_bytes(16));
-        $enc_pass = password_hash($data['pass'], PASSWORD_BCRYPT);
+        // // xác thực tài khoản
+        // $token = bin2hex(random_bytes(16));
+        // $enc_pass = password_hash($data['pass'], PASSWORD_BCRYPT);
         
-        $query = "INSERT INTO `user_cred`(`name`, `email`, `address`, `phonenum`, `cccd`, `dob`, `profile`, `password`, `is_verified`, `token`) 
-                    VALUES (?,?,?,?,?,?,?,?,?,?)";
-        $values = [$data['name'], $data['email'], $data['address'], $data['phonenum'], $data['cccd'],
-                    $img, $enc_pass, $token];
+        // $query = "INSERT INTO `user_cred`(`name`, `email`, `address`, `phonenum`, `cccd`, `dob`, `profile`, `password`, `is_verified`, `token`) 
+        //             VALUES (?,?,?,?,?,?,?,?,?,?)";
+        // $values = [$data['name'], $data['email'], $data['address'], $data['phonenum'], $data['cccd'],
+        //             $img, $enc_pass, $token];
         
-        if (insert($query, $values, 'ssssssssss')) {
-            echo 1;
-        }
-        else {
-            echo 'Thất bại';
-        }
+        // if (insert($query, $values, 'ssssssssss')) {
+        //     echo 1;
+        // }
+        // else {
+        //     echo 'Thêm dữ liệu thất bại';
+        // }
     }
 
 

@@ -19,10 +19,10 @@
                     <a class="nav-link text-white" href="rooms.php">Phòng</a>
                 </li>
                 <li>
-                    <a class="nav-link text-white" href="features_facilities.php">Features and Facilities</a>
+                    <a class="nav-link text-white" href="features_facilities.php">Tiện ích nổi bật</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="carousel.php">Carousel</a>
+                    <a class="nav-link text-white" href="carousel.php">Hiệu ứng</a>
                 </li>
                 <li>
                     <a class="nav-link text-white" href="user_queries.php">Phản hồi</a>
