@@ -32,7 +32,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-12 my-5 px-4">
+            <div class="col-12 my-5 mb-4 px-4">
                 <h2 class="fw-bold"><?php echo $room_data['name'] ?></h2>
                 <div style="font-size: 14px;">
                     <a href="index.php" class="text-secondary text-decoration-none">Trang chủ</a>
@@ -86,7 +86,7 @@
                             price;
 
                             echo <<< rating
-                                <div class="mb-3"></div>
+                                <div class="mb-3">
                                     <i class="bi bi-star-fill text-warning"></i>
                                     <i class="bi bi-star-fill text-warning"></i>
                                     <i class="bi bi-star-fill text-warning"></i>
@@ -103,8 +103,8 @@
                                                     </span>";           
                             }
 
-                            echo<<<features
-                                <div class="facilities mb-3">
+                            echo <<< features
+                                <div class="mb-3">
                                     <h6 class="mb-1">Features</h6>
                                     $features_data
                                 </div>
@@ -152,12 +152,13 @@
                     </div>         
                 </div>
             </div>
+            
 
             <div class="col-12 mt-4 px-4">
                 <div class="mb-5">
                     <h5>Description</h5>
                     <p>
-                        <?php echo $room_data['desc']?>
+                        <?php echo $room_data['description']?>
                     </p>
                 </div>
 
