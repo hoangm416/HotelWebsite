@@ -1,6 +1,7 @@
 <?php
     require('admin/inc/db_config.php'); 
     require('admin/inc/essentials.php');
+    require('inc/connection.php');
 
     $contact_q = "SELECT * FROM `contact_details` WHERE `sr_no`=?"; 
     $values = [1];
@@ -48,7 +49,7 @@
     <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form>
+                <form method="POST" action="login_register.php">
                     <div class="modal-header">
                         <h5 class="modal-title d-flex align-items-center">
                             <i class="bi bi-person-circle fs-3 me-2"></i> Đăng nhập tài khoản
@@ -78,7 +79,7 @@
     <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <form id="register-form">
+                <form id="register-form" method="POST" action="login_register.php">
                     <div class="modal-header">
                         <h5 class="modal-title d-flex align-items-center">
                         <i class="bi bi-person-lines-fill fs-3 me-2"></i>
@@ -98,7 +99,7 @@
                                 </div>
                                 <div class="col-md-6 p-0 mb-3">
                                     <label class="form-label">Số CCCD</label>
-                                    <input name="cccd" type="number" class="form-control shadow-none" required>
+                                    <input name="pincode" type="number" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 ps-0 mb-3">
                                     <label class="form-label">Số điện thoại</label>

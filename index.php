@@ -327,11 +327,11 @@
                 <div class="bg-white p-4 rounded mb-4">
                     <h5>Theo dõi</h5>
                     <?php 
-                        if($contact_r['x']!=''){
+                        if($contact_r['fb']!=''){
                             echo<<<data
-                            <a href="$contact_r[x]" class="d-inline-block mb-3">
+                            <a href="$contact_r[fb]" class="d-inline-block mb-3">
                                 <span class="badge bg-light text-dark fs-6 p-2">
-                                <i class="bi bi-twitter-x"></i> X
+                                <i class="bi bi-twitter-x"></i> Twitter
                                 </span>
                             </a>
                             <br>

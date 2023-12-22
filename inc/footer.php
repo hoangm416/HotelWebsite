@@ -19,7 +19,7 @@
             <a href="about.php" class="d-inline-block mb-2 text-dark text-decoration-none">Về chúng tôi</a> 
         </div>
         <div class="col-lg-4 p-4">
-            <h5 class="mb-3">Follow us</h5>
+            <h5 class="mb-3">Mạng xã hội</h5>
             <!-- <?php
              if($contact_r['fb']!=''){
                 echo<<<data
@@ -30,13 +30,15 @@
              } 
              ?> -->
             
-            <a href="<?php echo $contact_r['fb'] ?>" class="d-inline-block text-dark text-decoration-none mb-2">
+            <a href="<?php echo $contact_r['fb'] ?>" class="d-inline-block text-dark text-decoration-none mb-2 ">
              <i class="bi bi-facebook me-1"></i> Facebook
             </a><br>
             <a href="<?php echo $contact_r['insta'] ?>" class="d-inline-block text-dark text-decoration-none ">
              <i class="bi bi-instagram me-1"></i> Instagram
             </a><br>
-
+            <a href="<?php echo "<a href='https://www.tiktok.com'></a>" ?>" class="d-inline-block text-dark text-decoration-none ">
+             <i class="bi bi-tiktok me-1"></i> TikTok
+            </a><br>
     </div>
 </div>
 
