@@ -65,7 +65,7 @@
 
 </script>
 
-<script>
+<!-- <script>
 
     let register_form = document.getElementById('register_form');
     
@@ -111,4 +111,4 @@
         }
         xhr.send(data);
     })
-</script>
+</script> -->

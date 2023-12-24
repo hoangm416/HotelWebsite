@@ -111,31 +111,31 @@
         }         
     }
 
-    function uploadUserImage($image)
-    {
-        $valid_mime = ['image/jpeg', 'image/png'];
-        $img_mime = $image['type'];
+    // function uploadUserImage($image)
+    // {
+    //     $valid_mime = ['image/jpeg', 'image/png'];
+    //     $img_mime = $image['type'];
 
-        if (!in_array($img_mime, $valid_mime)) {
-            return 'Ảnh không hợp lệ';
-        }
-        else {
-            $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
-            $rname = 'IMG_'.random_int(100, 999).".jpeg";
-            $img_path = UPLOAD_IMAGE_PATH.USERS_FOLDER.$rname;
+    //     if (!in_array($img_mime, $valid_mime)) {
+    //         return 'Ảnh không hợp lệ';
+    //     }
+    //     else {
+    //         $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
+    //         $rname = 'IMG_'.random_int(100, 999).".jpeg";
+    //         $img_path = UPLOAD_IMAGE_PATH.USERS_FOLDER.$rname;
 
-            if ($ext == 'png' || $ext = 'PNG') {
-                $img = imagecreatefrompng($image['tmp_name']);
-            }
-            else {
-                $img = imagecreatefromjpeg($image['tmp_name']);
-            }
-        }
+    //         if ($ext == 'png' || $ext = 'PNG') {
+    //             $img = imagecreatefrompng($image['tmp_name']);
+    //         }
+    //         else {
+    //             $img = imagecreatefromjpeg($image['tmp_name']);
+    //         }
+    //     }
 
-        if (imagejpeg($img, $img_path, 75))
-            return $rname;
-        else
-            return 'Đẩy ảnh thất bại';
-    }
+    //     if (imagejpeg($img, $img_path, 75))
+    //         return $rname;
+    //     else
+    //         return 'Đẩy ảnh thất bại';
+    // }
 
 ?>

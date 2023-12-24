@@ -1,7 +1,8 @@
 <?php
     require('admin/inc/db_config.php'); 
     require('admin/inc/essentials.php');
-    require('inc/connection.php');
+    //require('inc/connection.php');
+    session_start();
 
     $contact_q = "SELECT * FROM `contact_details` WHERE `sr_no`=?"; 
     $values = [1];
@@ -33,20 +34,42 @@
                 </li>
                 
             </ul>
-            <div class="d-flex">
-                
-                <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
-                    Đăng nhập
-                </button>
-                <button type="button" class="btn btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#registerModal">
-                    Đăng ký
-                </button>
+            <div class="d-flex">  
+                <?php 
+                    if (isset($_SESSION["user"]) && $_SESSION["user"]==true)
+                    {
+                        // $fullname = $_SESSION["fullname"];
+                        echo <<< data
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-outline-dark shadow-none dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                    Người dùng
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-lg-end">
+                                    <li><a class="dropdown-item" href="profile.php">Thông tin</a></li>
+                                    <li><a class="dropdown-item" href="bookings.php">Đặt phòng</a></li>
+                                    <li><a class="dropdown-item" href="logout.php">Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                        data;
+                    }
+                    else
+                    {
+                        echo <<< data
+                            <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" onclick="window.location.href='login.php'">
+                                Đăng nhập
+                            </button>
+                            <button type="button" class="btn btn-outline-dark shadow-none" onclick="window.location.href='registration.php'">
+                                Đăng ký
+                            </button>
+                        data;
+                    }
+                ?>  
             </div>
         </div>
     </div>
 </nav>
 
-    <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <form method="POST" action="login_register.php">
@@ -74,9 +97,9 @@
             
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <form id="register-form" method="POST" action="login_register.php">
@@ -89,7 +112,7 @@
                     </div>
                     <div class="modal-body">
                         <span class="badge rounded-pill bg-info text-dark mb-3 text-wrap lh-base">
-                            Chú ý: Nhập đúng thông tin cá nhân, khi check-in trực tiếp tại sảnh chúng tôi sẽ kiểm tra
+                            Chú ý: Nhập đúng thông tin cá nhân, khi check-in trực tiếp chúng tôi sẽ kiểm tra
                         </span>
                         <div class="container-fluid">
                             <div class="row">
@@ -103,29 +126,21 @@
                                 </div>
                                 <div class="col-md-6 ps-0 mb-3">
                                     <label class="form-label">Số điện thoại</label>
-                                    <input name="phonenum" type="number" accept=".jpg, .jpeg, .png, .webp" class="form-control shadow-none" required>
-                                </div>
-                                <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Ảnh</label>
-                                    <input name="profile" type="file" class="form-control shadow-none" required>
-                                </div>
-                                <div class="col-md-12 p-0 mb-3">
-                                    <label class="form-label">Địa chỉ</label>
-                                    <textarea name="address" class="form-control shadow-none" rows="1" required></textarea>
+                                    <input name="phonenum" type="number" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 ps-0 mb-3">
                                     <label class="form-label">Ngày sinh</label>
                                     <input name="dob" type="date" class="form-control shadow-none" required>
                                 </div>
-                                <div class="col-md-6 p-0 mb-3">
+                                <div class="col-md-6 ps-0 mb-3">
                                     <label class="form-label">Email</label>
                                     <input name="email" type="email" class="form-control shadow-none" required>
                                 </div>
-                                <div class="col-md-6 ps-0 mb-3">
+                                <div class="col-md-6 p-0 mb-3">
                                     <label class="form-label">Mật khẩu</label>
                                     <input name="pass" type="password" class="form-control shadow-none" required>
                                 </div>
-                                <div class="col-md-6 p-0 mb-3">
+                                <div class="col-md-6 ps-0 mb-3">
                                     <label class="form-label">Nhập lại mật khẩu</label>
                                     <input name="cpass" type="password" class="form-control shadow-none" required>
                                 </div>
@@ -137,8 +152,8 @@
                             <button type="submit" class="btn btn-dark shadow-none">ĐĂNG KÝ</button>
                         </div>
                     </div> 
-                </form>
-            
+                </form>         
             </div>
         </div>
-    </div>
+    </div> -->
+

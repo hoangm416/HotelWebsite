@@ -46,9 +46,8 @@
 <body class="bg-light">
 
     <?php require('inc/header.php'); ?>
-
+    
     <!-- Carousel -->
-
     <div class="container-fluid px-lg-4 mt-4">
         <div class="swiper swiper-container">
             <?php 
@@ -99,6 +98,7 @@
                                 <option value="1">Một</option>
                                 <option value="2">Hai</option>
                                 <option value="3">Ba</option>
+                                <option value="4">Bốn</option>
                             </select>
                         </div>
                         <div class="col-lg-2 mb-3">
