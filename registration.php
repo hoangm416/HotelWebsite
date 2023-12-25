@@ -1,117 +1,4 @@
 <?php 
-    // require('inc/connection.php');
-    // session_start();
-
-    // if (isset($_POST['login']))
-    // {
-    //     $query = "SELECT * FROM `user_cred` WHERE `email`='$_POST[email_phonenum]' OR `phonenum`='$_POST[email_phonenum]' ";
-    //     $result = mysqli_query($con, $query);
-
-    //     if ($result)
-    //     {
-    //         if(mysqli_num_rows($result) == 1) // tài khoản đã tồn tại
-    //         {
-    //             $result_fetch = mysqli_fetch_assoc($result);
-    //             if(password_verify($_POST['password'], $result_fetch['password']))
-    //             {
-    //                 $_SESSION['logged-in'] = true;
-    //                 $_SESSION['phonenum'] = $result_fetch['phonenum'];
-    //                 header("location: index.php");
-    //             }
-    //             else
-    //             {
-    //                 echo "
-    //                     <script>
-    //                     alert('Mật khẩu không đúng');
-    //                     window.location.href='index.php';
-    //                     </script>
-    //                     ";
-    //             }
-    //         }
-
-    //         else // tài khoản chưa tồn tại 
-    //         {
-    //             echo "
-    //             <script>
-    //                alert('SĐT hoặc email chưa đăng ký');
-    //                window.location.href='index.php';
-    //             </script>
-    //             ";
-    //         }
-    //     }
-    // }
-
-    // else if(isset($_POST['register']))
-    // {
-    //     $user_exist = "SELECT * FROM `user_cred` WHERE `email`='$_POST[email]' OR `phonenum`='$_POST[phonenum]' ";
-    //     $result = mysqli_query($con, $user_exist);
-
-    //     if ($result)
-    //     {
-    //         if(mysqli_num_rows($result) == 1) // tài khoản đã tồn tại
-    //         {
-    //             $result_fetch = mysqli_fetch_assoc($result);
-    //             if($result_fetch['email'] == $_POST['email'])
-    //             {
-    //                 // email đã tồn tại
-    //                 echo "
-    //                     <script>
-    //                        alert('$result_fetch[email] - Địa chỉ email đã tồn tại');
-    //                        window.location.href='index.php';
-    //                     </script>
-    //                     ";
-    //             }
-    //             else
-    //             {
-    //                 // SDT đã tồn tại
-    //                 echo "
-    //                     <script>
-    //                        alert('$result_fetch[phonenum] - Số điện thoại đã tồn tại');
-    //                        window.location.href='index.php';
-    //                     </script>
-    //                     ";
-    //             }
-    //         }
-
-    //         else // tài khoản chưa tồn tại 
-    //         {
-    //             $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-    //             $query = "INSERT INTO `user_cred`(`pincode`, `full_name`, `phonenum`, `email`, `password`, `dob`) 
-    //                  VALUES ('$_POST[pincode]', '$_POST[fullname]', '$_POST[phonenum]', '$_POST[email]', '$password', '$_POST[dob]')";
-
-    //             if(mysqli_query($con, $query))
-    //             {
-    //                 // tài khoản được thêm thành công
-    //                 echo "
-    //                     <script>
-    //                        alert('Đăng ký thành công');
-    //                        window.location.href='index.php';
-    //                     </script>
-    //                     ";
-    //             }
-    //             else 
-    //             {
-    //                 // thất bại
-    //                 echo "
-    //                     <script>
-    //                        alert('Đăng ký thất bại');
-    //                        window.location.href='index.php';
-    //                     </script>
-    //                     ";
-    //             }
-    //         }
-    //     }
-
-    //     else 
-    //     {
-    //         echo "
-    //             <script>
-    //               alert('Không thể chạy truy vấn');
-    //               window.location.href='index.php';
-    //             </script> ";
-    //     }
-    // }
-
     session_start();
     if (isset($_SESSION["user"])) {
         header("Location: index.php");
@@ -195,8 +82,7 @@
                 } else{
                     die("Đã có sự cố");
                 }
-           }
-          
+           }       
 
         }
         ?>
@@ -225,7 +111,7 @@
             </div>
             <div class="form-btn">
                 <input type="submit" class="btn btn-primary" value="Đăng ký" name="submit">
-            </div>
+            </div><br>
         </form>
         <div>
             <div>

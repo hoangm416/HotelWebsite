@@ -15,7 +15,7 @@ if (isset($_SESSION["user"])) {
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-image: url('https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-image: url('https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
             background-size: cover;
         }  
     </style>
@@ -54,7 +54,7 @@ if (isset($_SESSION["user"])) {
         </div>
         <div class="form-btn">
             <input type="submit" value="Đăng nhập" name="login" class="btn btn-primary">
-        </div>
+        </div><br>
       </form>
      <div><p>Chưa đăng ký? <a href="registration.php">Đăng ký tại đây</a></p></div>
     </div>

@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BK Hotel - Về chúng tôi</title>
         <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
         <?php require('inc/links.php'); ?>
+        <title><?php echo $settings_r['site_title']; ?> - Về chúng tôi</title>
     </head>
 
     <body class="bg-light">
@@ -85,10 +85,10 @@
                         while($row = mysqli_fetch_assoc($about_r)){
                             echo<<<data
                             <div class="swiper-slide swiper-slide-active bg-white text-center overflow-hidden rounded" role="group" aria-label="1 / 8" style="width: 888px;">
-                        <img src="images/about/$path$row[picture]" class="w-100">
-                        <h5 class="mt-2">$row[name]</h5>
-                    </div>
-                    data;
+                                <img src="images/about/$path$row[picture]" class="w-100">
+                                <h5 class="mt-2">$row[name]</h5>
+                            </div>
+                            data;
                         }
 
                     ?>       
