@@ -54,22 +54,15 @@
                         <i class="bi bi-envelope-fill"></i> <?php echo $contact_r['email'] ?>
                     </a>
 
-                    <h5 class="mt-4">Theo dõi</h5>
-                    <?php 
-                     if($contact_r['x']!=''){
-                        echo<<<data
-                        <a href="$contact_r[x]" class="d-inline-block text-dark fs-5 me-2">
-                        <i class="bi bi-twitter-x me-1"></i>
-                    </a>
-                    data;
-                     }
-                    ?>
-                    
+                    <h5 class="mt-4">Theo dõi</h5>             
                     <a href="<?php echo $contact_r['fb'] ?>" class="d-inline-block text-dark fs-5 me-2">
                       <i class="bi bi-facebook me-1"></i>
                     </a>
                     <a href="<?php echo $contact_r['insta'] ?>" class="d-inline-block text-dark fs-5">
                       <i class="bi bi-instagram me-1"></i>
+                    </a>
+                    <a href="<?php echo "tiktok.com" ?>" class="d-inline-block text-dark fs-5">
+                      <i class="bi bi-tiktok me-1"></i>
                     </a>
                 </div>
             </div>
