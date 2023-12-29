@@ -16,6 +16,9 @@
                     <a class="nav-link text-white" href="dashboard.php">Trang chủ</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link text-white" href="users.php">Khách hàng</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-white" href="rooms.php">Phòng</a>
                 </li>
                 <li>
