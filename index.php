@@ -191,7 +191,7 @@
                                             </span>   
                                         </div>
                                         <div class="d-flex justify-content-evenly mb-2">
-                                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Đặt phòng</a>
+                                            <a href="confirm_booking.php?id=$room_data[id]" class="btn btn-sm text-white custom-bg shadow-none">Đặt phòng</a>
                                             <a href="room_details.php?id=$room_data[id]" class="btn btn-sm btn-outline-dark shadow-none" >Thông tin chi tiết</a>
                                         </div>
                                     </div>
