@@ -3,7 +3,7 @@
     require('../inc/db_config.php');
     require('../inc/essentials.php');
 
-    date_default_timezone_set("Asia/Kolkata");
+    date_default_timezone_set("Asia/Ho_Chi_Minh");
 
     if(isset($_POST['check_availability'])){
         $frm_data = filteration($_POST);

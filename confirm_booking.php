@@ -78,7 +78,7 @@
             <div class="col-lg-5 col-md-12 px-4">
                 <div class="card mb-4 border-0 shadow-sm rounded-3">
                     <div class="card-body">
-                        <form action="" id="booking_form">
+                        <form action="pay_now.php" id="booking_form">
                             <h6 class="mb-3">Chi tiết đặt phòng</h6>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
@@ -155,7 +155,7 @@
                         pay_info.innerText= "Phòng đã được đặt vào ngày này!";
                     }
                     else{
-                        pay_info.innerHTML = "Số ngày: "+data.days+"<br>Tổng tiền: "+data.payment+"000VND";
+                        pay_info.innerHTML = "Số ngày: "+data.days+"<br>Tổng tiền: "+data.payment+"VND";
                         pay_info.classList.replace('text-danger', 'text-dark');
                         booking_form.elements['pay_now'].removeAttribute('disabled');
                     }
