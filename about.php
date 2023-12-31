@@ -80,7 +80,7 @@
             <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
                 <div class="swiper-wrapper mb-5" id="swiper-wrapper-dc64d9daf684fd29" aria-live="polite">
                     <?php 
-                        $about_r = selectAll('teamdetails');
+                        $about_r = selectAll('team_details');
                         $path=ABOUT_IMG_PATH;
                         while($row = mysqli_fetch_assoc($about_r)){
                             echo<<<data
