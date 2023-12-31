@@ -157,7 +157,7 @@
                     else{
                         pay_info.innerHTML = "Số ngày: "+data.days+"<br>Tổng tiền: "+data.payment+"000VND";
                         pay_info.classList.replace('text-danger', 'text-dark');
-                        booking_form.elements['pay_now'].removeAttibute('disabled');
+                        booking_form.elements['pay_now'].removeAttribute('disabled');
                     }
 
                     pay_info.classList.remove('d-none');
