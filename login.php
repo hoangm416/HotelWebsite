@@ -34,7 +34,10 @@ if (isset($_SESSION["user"])) {
                 if (password_verify($password, $user["password"])) {
                     session_start();
                     $_SESSION["user"] = "yes";
-                    // $_SESSION["fullname"] = $fullname;
+                    $_SESSION['uId'] = $user['id'];
+                    $_SESSION["uName"] = $user['full_name'];
+                    $_SESSION["uIdencard"] = $user['idencard'];
+                    $_SESSION["uPhone"] = $user['phonenum'];
                     header("Location: index.php");
                     die();
                 }else{

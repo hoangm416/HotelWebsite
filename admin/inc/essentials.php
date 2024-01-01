@@ -17,7 +17,6 @@
     define('ROOMS_FOLDER', 'rooms/');
     define('USERS_FOLDER', 'users/');
 
-
     function adminLogin()
     {
         session_start();

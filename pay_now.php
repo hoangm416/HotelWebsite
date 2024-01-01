@@ -7,15 +7,16 @@
 
     session_start();
 
-    // if(!(isset($_SESSION['login']) && $_SESSION['login'] == true))
-    // {
-    //     redirect('index.php');
-    // }
+    if(!(isset($_SESSION['user']) && $_SESSION['user'] == true))
+    {
+        redirect('index.php');
+    }
         $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
         $vnp_Returnurl = "https://localhost/HotelWebsite/pay_response.php";
         $vnp_TmnCode = "I26H1D4Y";//Mã website tại VNPAY 
         $vnp_HashSecret = "DGWCTLVSIIMEACJFDIYBYZCWYLLWVMCO"; //Chuỗi bí mật
-        $vnp_TxnRef = rand(11111, 9999999); //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
+        $vnp_TxnRef = 'ORD_'.$_SESSION['uId'].random_int(11111, 9999999); //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
+        $CUST_ID = $_SESSION['uId'];
         $vnp_OrderInfo = 'Noi dung thanh toan';
         $vnp_OrderType = 'billpayment';
         $vnp_Amount = $_SESSION['room']['payment'] * 100;
@@ -75,7 +76,7 @@
             // "vnp_Inv_Taxcode"=>$vnp_Inv_Taxcode,
             // "vnp_Inv_Type"=>$vnp_Inv_Type
         );
-        
+
         if (isset($vnp_BankCode) && $vnp_BankCode != "") {
             $inputData['vnp_BankCode'] = $vnp_BankCode;
         }
@@ -83,6 +84,20 @@
             $inputData['vnp_Bill_State'] = $vnp_Bill_State;
         }
         
+        //Insert payment data into database
+        $frm_data = filteration($_POST);
+
+        $query1 = "INSERT INTO `booking_order`(`user_id`, `room_id`, `check_in`, `check_out`, `order_id`) VALUES (?,?,?,?,?)";
+
+        
+        insert($query1, [$CUST_ID, $_SESSION['room']['id'], $frm_data['checkin'], $frm_data['checkout'], $vnp_TxnRef], 'issss');
+
+        $booking_id = mysqli_insert_id($con);
+
+        $query2 = "INSERT INTO `booking_details`(`booking_id`, `room_name`, `price`, `total_pay`, `user_name`, `phonenum`) VALUES (?,?,?,?,?,?)";
+
+        insert($query2, [$booking_id,$_SESSION['room']['name'], $_SESSION['room']['price'], $vnp_Amount, $frm_data['name'], $frm_data['phonenum']], 'isssss');
+
         //var_dump($inputData);
         ksort($inputData);
         $query = "";

@@ -15,7 +15,10 @@
         if (!isset($_GET['id'])) {
             redirect('rooms.php');
         }
-
+        else if(!(isset($_SESSION['user']) && $_SESSION['user'] == true))
+        {
+            redirect('rooms.php');
+        }
 
         $data = filteration($_GET);
 
@@ -34,9 +37,8 @@
             "payment" => null,
             "available" => false,
         ];
-
-        
-    
+        $user_res = select("SELECT * FROM `users` WHERE `id`=? LIMIT 1", [$_SESSION['uId']], "i");
+        $user_data = mysqli_fetch_assoc($user_res);
     ?>
 
     <div class="container">
@@ -68,7 +70,7 @@
                         <div class="card p-3 shadow-sm rounded">
                         <img src="$room_thumb" class="img-fluid rounded mb-3">
                         <h5>$room_data[name]</h5>
-                        <h6>$room_data[price].000VND/đêm</h6>
+                        <h6>$room_data[price] VND/đêm</h6>
                         </div>
                     data;
                 
@@ -78,7 +80,7 @@
             <div class="col-lg-5 col-md-12 px-4">
                 <div class="card mb-4 border-0 shadow-sm rounded-3">
                     <div class="card-body">
-                        <form action="pay_now.php" id="booking_form">
+                        <form action="pay_now.php" method="POST" id="booking_form">
                             <h6 class="mb-3">Chi tiết đặt phòng</h6>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
