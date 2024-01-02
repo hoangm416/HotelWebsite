@@ -23,7 +23,7 @@
                     </div> 
             
                     <div class="table-responsive">
-                        <table class="table table-hover border">
+                        <table class="table table-hover border" style="min-width: 1200px;">
                             <thead class="sticky-top">
                                 <tr class="bg-dark text-light">
                                     <th scope="col">#</th>
