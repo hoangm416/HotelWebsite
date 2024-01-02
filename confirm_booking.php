@@ -85,7 +85,7 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label">Họ và tên</label>
-                                    <input name="name" type="text" class="form-control shadow-none" required>
+                                    <input name="full_name" type="text" value="<?php echo $user_data['full_name'] ?>" class="form-control shadow-none" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label">Số điện thoại</label>
@@ -132,6 +132,10 @@
             booking_form.elements['pay_now'].setAttribute('disabled', true);
 
             if(checkin_val != '' && checkout_val != ''){
+
+                pay_info.classList.add('d-none');
+                pay_info.classList.replace('text-dark', 'text-danger');
+                info_loader.classList.remove('d-none');
 
                 let data = new FormData();
 
