@@ -33,7 +33,7 @@
             exit;
         }
 
-        $i = $start;
+        $i =$start + 1;
         $table_data = "";
 
         while($data = mysqli_fetch_assoc($limit_res))
@@ -43,13 +43,13 @@
             $checkout = date("d-m-Y", strtotime($data['check_out']));
 
             if($data['booking_status']=='thành công'){
-                $status_bg = 'bt-success';
+                $status_bg = 'bg-success';
             }
             else if($data['booking_status']=='cancelled'){
-                $status_bg = 'bt-danger';
+                $status_bg = 'bg-danger';
             }
             else {
-                $status_bg = 'bt-warning text-dark';
+                $status_bg = 'bg-warning text-dark';
             }
 
 
@@ -61,9 +61,9 @@
                             Order ID: $data[order_id]
                         </span>
                         <br>
-                        <b>Name :<b> $data[user_name]
+                        <b>Name:<b> $data[user_name]
                         <br>
-                        <b>Phone No :<b> $data[phonenum]
+                        <b>Phone No:<b> $data[phonenum]
                     </td>
                     <td>
                         <b>Room:</b> $data[room_name]
@@ -102,7 +102,7 @@
             }
 
             $disabled = ($page==1) ? "disabled" : "";
-            $prev = $page -1;
+            $prev = $page-1;
             $pagination .="<li class='page-item $disabled'>
                 <button onclick='change_page($prev)' class='page-link shadow-none'>Prev</button>
             </li>";
