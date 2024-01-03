@@ -2,7 +2,7 @@
     require('inc/db_config.php');
     require('inc/essentials.php');
     require('inc/mpdf/vendor/autoload.php');
-    adminLogin();
+    //adminLogin();
 
     if(isset($_GET['gen_pdf']) && isset($_GET['id']))
     {
@@ -50,7 +50,7 @@
             </tr>
             <tr>
                 <td>Tên phòng: $data[room_name]</td>
-                <td>Giá: $data[price] VND per night</td>
+                <td>Giá: $data[price] VND/đêm</td>
             </tr>
             <tr>
                 <td>Check-in: $checkin</td>
