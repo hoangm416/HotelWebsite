@@ -36,9 +36,9 @@
                             Order ID: $data[order_id]
                         </span>
                         <br>
-                        <b>Name :<b> $data[user_name]
+                        <b>Name:<b> $data[user_name]
                         <br>
-                        <b>Phone No :<b> $data[phonenum]
+                        <b>Phone No:<b> $data[phonenum]
                     </td>
                     <td>
                         <b>Room:</b> $data[room_name]
@@ -55,7 +55,7 @@
                         <b>Date:</b> $date
                     </td>
                     <td>
-                    <button type='button' onclick='assign_room($data[booking_id])'class='btn text-white btn-sm fw-bold custom-bg shadow-none' data-bs-toggle='modal' data-bs-target='#assign-room'>
+                    <button type='button' onclick='assign_room($data[booking_id])' class='btn text-white btn-sm fw-bold custom-bg shadow-none' data-bs-toggle='modal' data-bs-target='#assign-room'>
                         <i class='bi bi-check2-square'></i> Assign Room
                     </button>
                     <br>
@@ -78,7 +78,7 @@
 
         $query = "UPDATE `booking_order` bo INNER JOIN `booking_details` bd
             ON bo.booking_id = bd.booking_id
-            SET bo.arrived = ?, bd.room_no = ?
+            SET bo.arrival = ?, bd.room_no = ?
             WHERE bo.booking_id = ?";
 
         $values = [1, $frm_data['room_no'],$frm_data['booking_id']];
