@@ -2,7 +2,7 @@
     require('inc/db_config.php');
     require('inc/essentials.php');
     require('inc/mpdf/vendor/autoload.php');
-    //adminLogin();
+    adminLogin();
 
     if(isset($_GET['gen_pdf']) && isset($_GET['id']))
     {
