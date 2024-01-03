@@ -13,16 +13,44 @@
         <div class="collapse navbar-collapse flex-column align-items-stretch mt-2" id="adminDropdown">
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#dashboard.php">Trang chủ</a>
+                    <a class="nav-link text-white" href="dashboard.php">Trang chủ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#rooms.php">Phòng</a>
+                    <button class="btn text-white px-3 w-100 shadow-none text-start d-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#bookingLinks">
+                        <span>Đặt phòng</span>
+                        <span><i class="bi bi-caret-down-fill"></i></span>
+                    </button>
+                    <div class="collapse show px-3 small mb-1" id="bookingLinks">
+                        <ul class="nav nav-pills flex-column rounded border border-secondary">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="new_bookings.php">Đặt Phòng Mới</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="refund_bookings.php">Hoàn Tiền Đặt Phòng</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="booking_records.php">Lịch Sử Đặt Phòng </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Người dùng</a>
+                    <a class="nav-link text-white" href="users.php">Khách hàng</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#settings.php">Cài đặt</a>
+                    <a class="nav-link text-white" href="rooms.php">Phòng</a>
+                </li>
+                <li>
+                    <a class="nav-link text-white" href="features_facilities.php">Tiện ích nổi bật</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="carousel.php">Hiệu ứng</a>
+                </li>
+                <li>
+                    <a class="nav-link text-white" href="user_queries.php">Phản hồi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="settings.php">Cài đặt</a>
                 </li>
                 </ul>
             </div>
