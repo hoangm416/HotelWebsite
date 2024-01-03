@@ -96,7 +96,7 @@
 
         $query2 = "INSERT INTO `booking_details`(`booking_id`, `room_name`, `price`, `total_pay`, `user_name`, `phonenum`) VALUES (?,?,?,?,?,?)";
 
-        insert($query2, [$booking_id,$_SESSION['room']['name'], $_SESSION['room']['price'], $vnp_Amount, $frm_data['name'], $frm_data['phonenum']], 'isssss');
+        insert($query2, [$booking_id,$_SESSION['room']['name'], $_SESSION['room']['price'], $vnp_Amount, $frm_data['full_name'], $frm_data['phonenum']], 'isssss');
 
         //var_dump($inputData);
         ksort($inputData);
