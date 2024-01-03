@@ -71,7 +71,7 @@
                         <b>Price:</b> $data[price]VND
                     </td>
                     <td>
-                        <b>Amout:</b> $data[trans_amt]VND
+                        <b>Amount:</b> $data[trans_amt]VND
                         <br>
                         <b>Date:</b> $date
                     </td>
@@ -79,8 +79,8 @@
                         <span class='badge $status_bg'>$data[booking_status]</span>
                     </td>
                     <td>
-                    <button type='button' onclick='cancel_booking($data[booking_id])' class='mt-2 btn btn-outline-danger btn-sm fw-bold shadow-none'>
-                        <i class='bi bi-trash'></i>
+                    <button type='button' onclick='download($data[booking_id])' class='btn btn-outline-success btn-sm fw-bold shadow-none'>
+                        <i class='bi bi-file-earmark-arrow-down-fill'></i>
                     </button>
                     </td>
                 </tr>
