@@ -12,11 +12,11 @@
         $page = $frm_data['page'];
         $start = ($page-1) * $limit;
 
-        $query = "SELECT bo.*, bd.* FROM`booking_order` bo
+        $query = "SELECT bo.*, bd.* FROM `booking_order` bo
             INNER JOIN `booking_details` bd ON bo.booking_id = bd.booking_id
             WHERE ((bo.booking_status ='thành công' AND bo.arrival =1) 
             OR (bo.booking_status ='cancelled' AND bo.refund =1)
-            OR (bo.booking_status ='payment failed'))
+            OR (bo.booking_status ='thất bại'))
             AND (bo.order_id LIKE ? OR bd.phonenum LIKE ? OR bd.user_name LIKE ?)
             ORDER BY bo.booking_id DESC";
         
