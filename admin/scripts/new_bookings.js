@@ -31,7 +31,7 @@ assign_room_form.addEventListener('submit', function(e){
         var modal = bootstrap.Modal.getInstance(myModal);
         modal.hide();
 
-        if(this.responseText==0){
+        if(this.responseText==1){
             alert('success', 'Room Number Alloted! Booking Finalized!');
             assign_room_form.reset();
             get_bookings();
