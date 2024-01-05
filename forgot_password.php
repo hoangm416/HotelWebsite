@@ -101,10 +101,11 @@
             ';
         } 
         else if ($_SESSION["reset_stage"] == "reset_password") {
+            $email = $_SESSION["email"];
             echo '
                 <form action="forgot_password.php" method="post">
                     <div>
-                        <p>Đặt lại mật khẩu</p>
+                        <p>Đặt lại mật khẩu cho tài khoản '.$email.'</p>
                     </div>
                     <div class="form-group">
                         <input type="password" placeholder="Nhập mật khẩu mới:" name="new_password" class="form-control">

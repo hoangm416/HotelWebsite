@@ -39,11 +39,11 @@
            if (empty($fullName) OR empty($idencard) OR empty($phonenum) OR empty($email) OR empty($password) OR empty($passwordRepeat)) {
             array_push($errors, "Yêu cầu nhập đủ thông tin");
            }
-           if (!filter_var($idencard, FILTER_VALIDATE_INT) || strlen($idencard) != 12) {
-            array_push($errors, "Số CCCD không đủ 12 chữ số");
+           if (!ctype_digit($idencard) || strlen($idencard) != 12) {
+            array_push($errors, "Chỉ chấp nhận số CCCD đúng 12 chữ số");
            }
-           if (!filter_var($phonenum, FILTER_VALIDATE_INT) || strlen($phonenum) != 10) {
-            array_push($errors, "SĐT không đủ 10 chữ số");
+           if (!ctype_digit($phonenum) || strlen($phonenum) != 10) {
+            array_push($errors, "Chỉ chấp nhận SĐT đúng 10 chữ số");
            }
            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             array_push($errors, "Email không hợp lệ");
