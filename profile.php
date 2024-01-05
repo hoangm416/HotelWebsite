@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require('inc/links.php'); ?>
-    <title><?php echo $settings_r['site_title'] ?>Thông tin cá nhân</title>
+    <title><?php echo $settings_r['site_title']; ?>Thông tin cá nhân</title>
 </head>
 <body class="bg-light">
     
@@ -70,6 +70,26 @@
                 </div>
             </div>  
 
+            <div class="col-md-8 mb-5 px-4">
+                <div class="bg-white p-3 p-md-4 rounded shadow-sm">
+                    <form id="pass-form">
+                        <h5 class="mb-3 fw-bold">Đổi mật khẩu</h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Mật khẩu mới</label>
+                                <input name="new_pass" type="password" class="form-control shadow-none" required>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label">Xác nhận mật khẩu mới</label>
+                                <input name="confirm_pass" type="password"class="form-control shadow-none" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn text-white custom-bg shadow-none">Lưu thay đổi</button>
+                    </form>
+                </div>
+            </div> 
         </div>
     </div>
 
@@ -94,13 +114,48 @@
 
             xhr.onload = function(){
                 if (this.responseText == 'phone_already') {
-                    alert('error',"Số điện thoại đã được sử dụng!");
+                    alert('Số điện thoại đã được sử dụng');
                 }
                 else if (this.responseText == 0) {
-                    
+                    alert('Lưu không thành công! Vui lòng thử lại sau!')
                 }
                 else {
-                    alert('success',"Lưu thành công!");
+                    alert("Lưu thành công!");
+                }
+            }
+
+            xhr.send(data);
+    
+        }) 
+
+        let pass_form = document.getElementById('pass-form');
+
+        pass_form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            let new_pass = pass_form.elements['new_pass'].value;
+            let confirm_pass = pass_form.elements['confirm_pass'].value;
+
+            if (new_pass != confirm_pass) {
+                alert('Xác nhận mật khẩu không thành công!');
+                return false;
+            }
+
+            let data = new FormData();
+            data.append('pass_form','');
+            data.append('new_pass',new_pass);   
+            data.append('confirm_pass',confirm_pass);
+            
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST","admin/ajax/profile.php",true);
+
+            xhr.onload = function(){
+                if (this.responseText == 'mismatch') {
+                    alert('Xác nhận mật khẩu không thành công!');
+                }
+                else {
+                    alert('Đổi mật khẩu thành công!');
+                    pass_form.reset();
                 }
             }
 
