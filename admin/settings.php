@@ -53,7 +53,7 @@
                                     <input type="text" name="site_title" id="site_title_inp" class="form-control shadow-none" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label fw-bold">About us</label>
+                                    <label class="form-label fw-bold">Về chúng tôi</label>
                                     <textarea name="site_about" id="site_about_inp" class="form-control shadow-none" rows="6" required></textarea>
                                 </div>
                             </div>
