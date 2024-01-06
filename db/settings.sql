@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2023 at 06:06 PM
+-- Generation Time: Jan 06, 2024 at 04:31 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bk hotel`
+-- Database: `hotelwebsite`
 --
 
 -- --------------------------------------------------------
@@ -38,7 +38,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`sr_no`, `site_title`, `site_about`) VALUES
-(1, 'hihi', 'hehe');
+(1, 'BK Hotel', 'Khách sạn số 1 Đại Cồ Việt');
 
 --
 -- Indexes for dumped tables
