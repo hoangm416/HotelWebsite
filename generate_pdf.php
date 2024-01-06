@@ -5,7 +5,10 @@
 
     session_start();
 
-
+    if(!(isset($_SESSION['user']) && $_SESSION['user'] == true)){
+        redirect('index.php');
+    }
+    
     if(isset($_GET['gen_pdf']) && isset($_GET['id']))
     {
         $frm_data = filteration($_GET);

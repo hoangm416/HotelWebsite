@@ -97,7 +97,7 @@
                                     <b>Date: </b> $date
                                 </p>
                                 <p>
-                                    <span class='badge $status_bg'>$data[booking_status]></span>
+                                    <span class='badge $status_bg'>$data[booking_status]</span>
                                 </p>
                                 $btn
                             </div>
@@ -129,7 +129,7 @@
             if(confirm('Bạn chắc chắn muốn hủy phòng chứ?'))
             {
                 let xhr = new XMLHttpRequest();
-                xhr.open("POST","ajax/cancel_booking.php",true);
+                xhr.open("POST","admin/ajax/cancel_booking.php",true);
                 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
                 xhr.onload=function(){
