@@ -14,7 +14,7 @@
     echo $json_data;
     }
 
-if(isset($_POST['upd_general']))
+    if(isset($_POST['upd_general']))
     {
     $frm_data = filteration($_POST);
 
@@ -25,7 +25,7 @@ if(isset($_POST['upd_general']))
     }
 
 
-if(isset($_POST['get_contacts']))
+    if(isset($_POST['get_contacts']))
     {
     $q = "SELECT * FROM `contact_details` WHERE `sr_no` =?"; 
     $values = [1];
