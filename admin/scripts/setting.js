@@ -132,7 +132,6 @@ function upd_contracts()
         {
             alert('thất bại', 'Chưa có thay đổi!');
         }
-        get_general();
     }
 
     xhr.send(data_str);
