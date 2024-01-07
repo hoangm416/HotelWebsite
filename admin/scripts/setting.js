@@ -51,12 +51,12 @@ function upd_general(site_title_val,site_about_val)
 
         if(this.responseText == 1)
         {
-            alert('thành công', 'Thay đổi đã được lưu!');
+            alert('success', 'Thay đổi đã được lưu!');
             get_general();
         }
         else
         {
-            alert('lỗi', 'Không thay đổi!');
+            alert('errot', 'Không thay đổi!');
         }
     }
     xhr.send('site_title='+site_title_val+'&site_about='+site_about_val+'&upd_general');
@@ -125,12 +125,12 @@ function upd_contracts()
         modal.hide();
         if(this.responseText == 1 )
         {
-            alert('thành công', 'Thay đổi đã được lưu!');
+            alert('success', 'Thay đổi đã được lưu!');
             get_contracts();
         }
         else
         {
-            alert('thất bại', 'Chưa có thay đổi!');
+            alert('error', 'Chưa có thay đổi!');
         }
         get_general();
     }
