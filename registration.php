@@ -39,13 +39,19 @@
            if (empty($fullName) OR empty($idencard) OR empty($phonenum) OR empty($email) OR empty($password) OR empty($passwordRepeat)) {
             array_push($errors, "Yêu cầu nhập đủ thông tin");
            }
+           if (!ctype_digit($idencard) || strlen($idencard) != 12) {
+            array_push($errors, "Chỉ chấp nhận số CCCD đúng 12 chữ số");
+           }
+           if (!ctype_digit($phonenum) || strlen($phonenum) != 10) {
+            array_push($errors, "Chỉ chấp nhận SĐT đúng 10 chữ số");
+           }
            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             array_push($errors, "Email không hợp lệ");
-           }
+           }    
            if (strlen($password) < 6) {
             array_push($errors, "Mật khẩu phải có ít nhất 6 ký tự");
            }
-           if ($password!==$passwordRepeat) {
+           if ($password != $passwordRepeat) {
             array_push($errors, "Mật khẩu không khớp");
            }
            require_once "database.php";
@@ -56,13 +62,14 @@
            if ($rowCount > 0) {
                 array_push($errors,"Email đã tồn tại!");
            }
+
            $sql2 = "SELECT * FROM users WHERE phonenum = '$phonenum'";
            $result2 = mysqli_query($conn, $sql2);
            $rowCount2 = mysqli_num_rows($result2);
            if ($rowCount2 > 0) {
                 array_push($errors,"SĐT đã tồn tại!");
-            }
-           
+           }
+                
             if (count($errors)>0) 
            {
                 foreach ($errors as  $error) {
@@ -83,12 +90,11 @@
                     die("Đã có sự cố");
                 }
            }       
-
         }
         ?>
         
         <form action="registration.php" method="post">
-            <span class="badge rounded-pill bg-info text-dark mb-3 text-wrap lh-base">
+            <span class="badge rounded-pill bg-warning text-dark mb-3 text-wrap lh-base">
                 Chú ý: Nhập đúng thông tin cá nhân, khi check-in trực tiếp chúng tôi sẽ kiểm tra
             </span>
             <div class="form-group">
@@ -115,7 +121,7 @@
         </form>
         <div>
             <div>
-                <p>Đã đăng ký? <a href="login.php">Đăng nhập tại đây</a></p>
+                <p>Đã có tài khoản? <a href="login.php">Đăng nhập tại đây</a></p>
             </div>
         </div>
     </div>

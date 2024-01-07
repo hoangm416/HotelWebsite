@@ -1,9 +1,14 @@
 <?php
-    require('inc/db_config.php');
-    require('inc/essentials.php');
-    require('inc/mpdf/vendor/autoload.php');
-    adminLogin();
+    require('admin/inc/db_config.php');
+    require('admin/inc/essentials.php');
+    require('admin/inc/mpdf/vendor/autoload.php');
 
+    session_start();
+
+    if(!(isset($_SESSION['user']) && $_SESSION['user'] == true)){
+        redirect('index.php');
+    }
+    
     if(isset($_GET['gen_pdf']) && isset($_GET['id']))
     {
         $frm_data = filteration($_GET);
@@ -22,7 +27,7 @@
 
         if ($total_rows == 0)
         {
-            header('location: dashboard.php');
+            header('location: index.php');
             exit;
         }
 
@@ -90,6 +95,6 @@
         $mpdf->Output($data['order_id'].'.pdf','D');
     }
     else{
-        header('location: dashboard.php');
+        header('location: index.php');
     }
 ?>

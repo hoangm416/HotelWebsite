@@ -1,8 +1,8 @@
 <?php
-session_start();
-if (isset($_SESSION["user"])) {
-   header("Location: index.php");
-}
+    session_start();
+    if (isset($_SESSION["user"])) {
+        header("Location: index.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,11 +55,12 @@ if (isset($_SESSION["user"])) {
         <div class="form-group">
             <input type="password" placeholder="Nhập mật khẩu:" name="password" class="form-control">
         </div>
-        <div class="form-btn">
+        <div class="form-group" style="display: flex; justify-content: space-between; align-items: center">
             <input type="submit" value="Đăng nhập" name="login" class="btn btn-primary">
-        </div><br>
+            <p><a href="forgot_password.php">Quên mật khẩu?</a></p>
+        </div>
       </form>
-     <div><p>Chưa đăng ký? <a href="registration.php">Đăng ký tại đây</a></p></div>
+     <div><p>Chưa có tài khoản? <a href="registration.php">Đăng ký tại đây</a></p></div>
     </div>
 </body>
 </html>
