@@ -156,6 +156,34 @@
                             $thumb_res = mysqli_fetch_assoc($thumb_q);
                             $room_thumb = ROOMS_IMG_PATH.$thumb_res['image'];
                         }
+
+                        $rating_q = "SELECT AVG(rating) AS `avg_rating` FROM  `rating_review` 
+                         WHERE `room_id` = '$room_data[id]' ORDER BY `sr_no` DESC LIMIT 20";
+
+                        $rating_res = mysqli_query($con,$rating_q);
+                        $rating_fetch = mysqli_fetch_assoc($rating_res);
+
+                        $rating_data = "";
+
+                        if($rating_fetch['avg_rating']!=NULL)
+                        {
+                            $rating_data = "<div class='rating mb-4'>
+                                <h6 class='mb-1'>Đánh giá</h6>
+                                <span class='badge rounded-pill bg-light'>
+                            ";
+
+                            for($i=0; $i< $rating_fetch['avg_rating']; $i++){
+                                $rating_data .="<i class='bi bi-star-fill text-warning'></i>";
+                            }
+                                $rating_data .= "</span>
+                                    </div>
+                                ";
+                        
+                        }
+
+                        
+
+
                         // print room card
                         echo <<<data
                             <div class="col-lg-4 col-md-6 my-3">
@@ -181,15 +209,7 @@
                                                 $room_data[children] Trẻ em
                                             </span>
                                         </div>
-                                        <div class="rating mb-4">
-                                            <h6 class="mb-1">Đánh giá</h6>
-                                            <span class="badge rounded-pill bg-light">
-                                                <i class="bi bi-star-fill text-warning"></i>
-                                                <i class="bi bi-star-fill text-warning"></i>
-                                                <i class="bi bi-star-fill text-warning"></i>
-                                                <i class="bi bi-star-fill text-warning"></i>  
-                                            </span>   
-                                        </div>
+                                        $rating_data
                                         <div class="d-flex justify-content-evenly mb-2">
                                             <a href="confirm_booking.php?id=$room_data[id]" class="btn btn-sm text-white custom-bg shadow-none">Đặt phòng</a>
                                             <a href="room_details.php?id=$room_data[id]" class="btn btn-sm btn-outline-dark shadow-none" >Thông tin chi tiết</a>
@@ -237,52 +257,37 @@
     <div class="container mt-5">
         <div class="swiper swiper-testimonials">
             <div class="swiper-wrapper mb-5">
+             <?php 
+             
+              $review_q = "SELECT rr.*,u.full_name AS uname, r.name AS rname FROM `rating_review` rr
+                INNER JOIN `users` u ON rr.user_id = u.id
+                INNER JOIN `rooms` r ON rr.room_id = r.id
+                ORDER BY `sr_no` DESC LIMIT 6";
 
-                <div class="swiper-slide bg-white p-4">
-                <div class="profile d-flex align-items-center mb-3">
-                    <img src="images/features/star.svg" width="30px">
-                    <h6 class="m-0 ms-2">Người dùng 69</h6>
-                </div>
-                <p>
-                Tôi rất hài lòng về dịch vụ phục vụ chu đáo và nụ cười niềm nở của nhân viên tại khách sạn này, đây quả là một trong những khách sạn tốt nhất tôi từng ở.
-                </p>
-                <div class="rating"></div>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i> 
-                </div>
-                <div class="swiper-slide bg-white p-4">
-                <div class="profile d-flex align-items-center mb-3">
-                    <img src="images/features/star.svg" width="30px">
-                    <h6 class="m-0 ms-2">Người dùng 829</h6>
-                </div>
-                <p>
-                Khách sạn này mang đến những trải nghiệm ở nơi nghỉ ngơi tuyệt vời. Phòng rộng rãi sạch sẽ, cảnh quan xanh mát, và đặc biệt là nhân viên phục vụ rất nhiệt tình, luôn sẵn lòng hỗ trợ khách hàng mọi yêu cầu. Tôi sẽ cân nhắc lựa chọn khách sạn này nếu lại ghé qua vùng này trong tương lai.
-                </p>
-                <div class="rating"></div>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i> 
-                </div>
-                <div class="swiper-slide bg-white p-4">
-                <div class="profile d-flex align-items-center mb-3">
-                    <img src="images/features/star.svg" width="30px">
-                    <h6 class="m-0 ms-2">Người dùng 666</h6>
-                </div>
-                <p>
-                Tôi không thể nhắc đến khách sạn này mà không nói lên sự hài lòng của mình. Ngôi khách sạn có vị trí đắc địa với view hướng biển rất đẹp. Dịch vụ ở đây chuyên nghiệp và trách nhiệm, đặc biệt là thái độ nhiệt tình, vui vẻ của nhân viên bốc xếp hành lý khi tôi đến và đi. Tôi sẽ chia sẻ khách sạn này với bạn bè và mong trở lại trong tương lai.
-                </p>
-                <div class="rating"></div>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i> 
-                </div>
+                $review_res = mysqli_query($con, $review_q);
+
+                // Kiểm tra số lượng đánh giá và phản hồi
+                if (mysqli_num_rows($review_res) == 0) {
+                    echo "<div class='text-center'>Chưa có đánh giá nào!</div>";
+                } else {
+                    while ($row = mysqli_fetch_assoc($review_res)) {
+                        $stars = "<i class='bi bi-star-fill text-warning'></i>";
+                        for ($i = 1; $i < $row['rating']; $i++) {
+                            $stars .= "<i class='bi bi-star-fill text-warning'></i>";
+                        }
+
+                        echo "<div class='swiper-slide bg-white p-4'>";
+                        echo "<div class='profile d-flex align-items-center mb-3'>";
+                        echo "<h6 class='m-0 '>Người dùng:$row[uname]</h6>";
+                        echo "</div>";
+                        echo "<p>$row[review]</p>";
+                        echo "<div class='rating'>$stars</div>";
+                        echo "</div>";
+                    }
+                }
+            ?>
+             
+            
 
             <div>
                 <div class="swiper-pagination"></div>

@@ -157,7 +157,7 @@
             alert('success','Booking Cancelled!');
         }
         else if(isset($_GET['review_status'])){
-            alert('thành công','Cảm ơn bạn đã đánh giá & bình luận!');
+            alert('success','Cảm ơn bạn đã đánh giá & bình luận!');
         }
     ?>
 
@@ -220,7 +220,7 @@
                     var modal = bootstrap.Modal.getInstance(myModal);
                     modal.hide();
 
-                    alert('Thất bại');
+                    alert('error','Thất bại');
                 }
             }
 
