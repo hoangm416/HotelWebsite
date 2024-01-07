@@ -46,6 +46,9 @@
                 <li>
                     <a class="nav-link text-white" href="user_queries.php">Phản hồi</a>
                 </li>
+                <li>
+                    <a class="nav-link text-white" href="rate_review.php">Đánh giá & phản hồi</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="settings.php">Cài đặt</a>
                 </li>

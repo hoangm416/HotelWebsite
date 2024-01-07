@@ -120,7 +120,7 @@
                 <form id="review-form">
                     <div class="modal-header">
                         <h5 class="modal-title d-flex align-items-center">
-                            <i class="bi bi-chat-square-heart-fill fs-3 me-2" ></i> Đánh giá & bình luận
+                            <i class="bi bi-chat-square-heart-fill fs-3 me-2" ></i> Đánh giá & phản hồi
                         </h5>
                     <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -136,7 +136,7 @@
                         </select>
                 </div>
                 <div class="mb-4">
-                    <label class="form-label" >   Bình luận   </label>
+                    <label class="form-label" >   Phản hồi   </label>
                     <textarea type="password" name="review" rows ="3" require class="form-control shadow-none"></textarea>
                 </div>
 
@@ -212,15 +212,15 @@
 
             xhr.onload = function()
             {
-                if (this.responseText == 0) {
+                if (this.responseText == 1) {
+                    window.location.href = 'bookings.php?review_status=true';
+                }
+                else{
                     var myModal = document.getElementById('reviewModal');
                     var modal = bootstrap.Modal.getInstance(myModal);
                     modal.hide();
 
                     alert('Thất bại');
-                }
-                else {
-                    window.location.href = 'bookings.php?review_status=true';
                 }
             }
 
