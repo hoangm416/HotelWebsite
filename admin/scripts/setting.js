@@ -102,7 +102,7 @@ contacts_s_form.addEventListener('submit', function(e)
     upd_contacts();
 });
 
-function upd_contracts()
+function upd_contacts()
 {
     let index = ['address', 'gmap', 'pn1', 'pn2', 'email', 'tw', 'fb', 'insta', 'iframe'];
     let contacts_inp_id = ['address_inp', 'gmap_inp', 'pn1_inp', 'pn2_inp', 'email_inp', 'tw_inp', 'fb_inp', 'insta_inp', 'iframe_inp'];
