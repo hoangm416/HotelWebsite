@@ -54,7 +54,7 @@ function rem_feature(val) {
             get_features();
         }
         else if(this.responseText == 'room_added') {
-            alert('error', 'Feature is added in room!')
+            alert('error', 'Có phòng đang dùng, không thể xóa!')
         }
         else {
             alert('error','Hệ thống lỗi, vui lòng thử lại!');
@@ -126,7 +126,7 @@ function rem_facility(val) {
             get_facilities();
         }
         else if(this.responseText == 'room_added') {
-            alert('error', 'Facility is added in room!')
+            alert('error', 'Có phòng đang dùng, không thể xóa!')
         }
         else {
             alert('error','Hệ thống lỗi, vui lòng thử lại!');
