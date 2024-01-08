@@ -12,7 +12,7 @@
         redirect('index.php');
     }
         $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-        $vnp_Returnurl = "https://localhost/HotelWebsite/pay_response.php";
+        $vnp_Returnurl = SITE_URL."pay_response.php";
         $vnp_TmnCode = "I26H1D4Y";//Mã website tại VNPAY 
         $vnp_HashSecret = "DGWCTLVSIIMEACJFDIYBYZCWYLLWVMCO"; //Chuỗi bí mật
         $vnp_TxnRef = 'ORD_'.$_SESSION['uId'].random_int(11111, 9999999); //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY

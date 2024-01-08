@@ -244,9 +244,10 @@
             <?php
                 $res = mysqli_query($con,"SELECT  * FROM `facilities` ORDER BY `id` DESC LIMIT 5");
                 while ($row = mysqli_fetch_assoc($res)) {
+                    $img = FACILITIES_IMG_PATH.$row['icon'];
                     echo<<<data
                         <div class = "col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                            <img src = "http://localhost:3000/HotelWebsite/images/facilities/$row[icon]" width = "50px" class = "mt-4">
+                            <img src = $img width = "50px" class = "mt-4">
                             <h5 class = "mt-md-3">$row[name]</h5>
                         </div>
                     data;
