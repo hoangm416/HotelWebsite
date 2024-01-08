@@ -67,7 +67,7 @@
                             $btn="<button onclick='cancel_booking($data[booking_id])' type='button' class='btn btn-danger btn-sm shadow-none'>Cancel</button>";
                         }
                     }
-                    else if($data['booking_status']=='cancelled')
+                    else if($data['booking_status']=='thất bại')
                     {
                         $status_bg = "bg-danger";
 
@@ -154,7 +154,7 @@
 
     <?php
         if(isset($_GET['cancel_status'])){
-            alert('success','Booking Cancelled!');
+            alert('success','Hủy phòng thành công!');
         }
         else if(isset($_GET['review_status'])){
             alert('success','Cảm ơn bạn đã đánh giá & bình luận!');
@@ -179,7 +179,7 @@
                     window.location.href="bookings.php?cancel_status=true";
                   }
                   else{
-                    alert('error','Cancellation Failed!')
+                    alert('error','Hủy phòng thất bại!')
                   }
                 }
 
