@@ -40,7 +40,7 @@
         if($_GET['vnp_TransactionStatus'] == 00){
             $upd_query = "UPDATE `booking_order` SET `booking_status`='thành công',
             `trans_id`='$_GET[vnp_TransactionNo]',`trans_amt`='$_GET[vnp_Amount]',
-            `trans_status`='$_GET[vnp_TransactionStatus]',`tran_resp_code`='$_GET[vnp_ResponseCode]'
+            `trans_status`='$_GET[vnp_TransactionStatus]',`trans_resp_code`='$_GET[vnp_ResponseCode]'
              WHERE `booking_id`='$sltc_fetch[booking_id]'";
 
             mysqli_query($con, $upd_query);
@@ -50,7 +50,7 @@
         {
             $upd_query = "UPDATE `booking_order` SET `booking_status`='thất bại',
             `trans_id`='$_GET[vnp_TransactionNo]',`trans_amt`='$_GET[vnp_Amount]',
-            `trans_status`='$_GET[vnp_TransactionStatus]',`tran_resp_code`='$_GET[vnp_ResponseCode]'
+            `trans_status`='$_GET[vnp_TransactionStatus]',`trans_resp_code`='$_GET[vnp_ResponseCode]'
              WHERE `booking_id`='$sltc_fetch[booking_id]'";
             mysqli_query($con, $upd_query);
 
