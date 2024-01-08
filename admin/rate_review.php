@@ -88,7 +88,7 @@
                             <thead>
                                 <tr class="bg-dark text-light">
                                     <th scope="col">#</th>
-                                    <th scope="col">Số phòng</th>
+                                    <th scope="col">Tên phòng</th>
                                     <th scope="col">Tên người dùng</th>
                                     <th scope="col">Đánh giá</th>
                                     <th scope="col" width="30%">Phản hồi</th>
@@ -113,10 +113,10 @@
 
                                         $seen = '';
                                         if ($row['seen'] != 1) {
-                                            $seen = "<a href='?seen=$row[sr_no]' class='btn btn-sm rounded-pill btn-primary mb-2' style='font-size: 10px'>Đánh dấu là đã đọc</a>";
+                                            $seen = "<a href='?seen=$row[sr_no]' class='btn btn-sm rounded-pill btn-primary mb-2' style='font-size: 15px'>Đánh dấu là đã đọc</a>";
                                         }
                                         $seen.= "<a> </a>";
-                                        $seen.= "<a href='?del=$row[sr_no]' class='btn btn-sm rounded-pill btn-danger' style='font-size: 10px'>Xóa</a>";
+                                        $seen.= "<a href='?del=$row[sr_no]' class='btn btn-sm rounded-pill btn-danger mb-2' style='font-size: 15px'>Xóa</a>";
 
                                         echo <<<query
                                             <tr>

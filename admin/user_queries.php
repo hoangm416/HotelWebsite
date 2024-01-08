@@ -58,7 +58,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang quản lý - Phản hồi</title>
+    <title>Trang quản lý - Phản ánh</title>
     <?php require('inc/links.php'); ?>
 </head>
 <body class="bg-light">
@@ -69,7 +69,7 @@
     <div class="container-fluid" id="main-content">
         <div class="row">
             <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-               <h3 class="mb-4"> Phản hồi từ người dùng</h3>
+               <h3 class="mb-4"> Phản ánh từ người dùng</h3>
 
             <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">

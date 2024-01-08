@@ -109,6 +109,7 @@
                 }
 
             ?>
+                <?php require('inc/footer.php'); ?>
         
 
         </div>
@@ -156,14 +157,13 @@
         if(isset($_GET['cancel_status'])){
             alert('success','Phòng đã hủy!');
         }
-        else if(isset($_GET['review_status'])){
+        if (isset($_GET['rate_review'])) {
             alert('success','Cảm ơn bạn đã đánh giá & bình luận!');
         }
     ?>
 
 
 
-    <?php require('inc/footer.php'); ?>
 
     <script>
         function cancel_booking(id)
