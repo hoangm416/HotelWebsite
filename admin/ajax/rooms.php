@@ -73,13 +73,13 @@
                 <tr class='align-middle'>
                     <td>$i</td>
                     <td>$row[name]</td>
-                    <td>$row[area] sq. ft.</td>
+                    <td>$row[area] m²</td>
                     <td>
                         <span class='badge rounded-pill bg-light text-dark'>
-                            Adult: $row[adult]
+                            Người lớn: $row[adult]
                         </span>
                         <span class='badge rounded-pill bg-light text-dark'>
-                            Children: $row[children]
+                            Trẻ em: $row[children]
                         </span>
                     </td>
                     <td>$row[price]</td>

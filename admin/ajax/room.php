@@ -157,7 +157,7 @@
                         </div>
                     </div>
                     <div class='col-md-2 mt-lg-0 mt-md-0 mt-4 text-center'>
-                        <h6 class='mb-4'>$room_data[price].000VND/đêm</h6>
+                        <h6 class='mb-4'>$room_data[price]VND/đêm</h6>
                         <a href='confirm_booking.php?id=$room_data[id]' class='btn btn-sm w-100 text-white custom-bg shadow-none mb-2'>Đặt phòng</a>
                         <a href='room_details.php?id=$room_data[id]' class='btn btn-sm w-100 btn-outline-dark shadow-none' >Thông tin chi tiết</a>
                     </div>

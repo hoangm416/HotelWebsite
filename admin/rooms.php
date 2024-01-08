@@ -72,13 +72,13 @@
     <div class="container-fluid" id="main-content">
         <div class="row">
             <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-               <h3 class="mb-4"> Rooms</h3>
+               <h3 class="mb-4">Thông tin phòng</h3>
 
             <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">
                     <div class="text-end mb-4">
                         <button type="button" class="btn btn-dark shadow-none btn-sm" data-bs-toggle="modal" data-bs-target="#add-room">
-                            <i class="bi bi-plus-square"></i> Add
+                            <i class="bi bi-plus-square"></i> Thêm
                         </button>
                     </div>
             
@@ -87,13 +87,13 @@
                             <thead class="sticky-top">
                                 <tr class="bg-dark text-light">
                                     <th scope="col">#</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Area</th>
-                                    <th scope="col">Guests</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Loại phòng</th>
+                                    <th scope="col">Diện tích</th>
+                                    <th scope="col">Khách</th>
+                                    <th scope="col">Giá</th>
+                                    <th scope="col">Số lượng</th>
+                                    <th scope="col">Trạng thái</th>
+                                    <th scope="col">Hành động</th>
                                 </tr>
                             </thead>
                             <tbody id="room-data">
@@ -117,7 +117,7 @@
             <form id="add_room_form" autocomplete="off" >
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Add Room</h5>
+                <h5 class="modal-title">Thêm phòng</h5>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -126,27 +126,27 @@
                         <input type="text" name="name" class="form-control shadow-none" required>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="form-label fw-bold">Area</label>
+                        <label class="form-label fw-bold">Diện tích</label>
                         <input type="number" min="1" name="area" class="form-control shadow-none" required>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="form-label fw-bold">Price</label>
+                        <label class="form-label fw-bold">Giá</label>
                         <input type="number" min="1" name="price" class="form-control shadow-none" required>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="form-label fw-bold">Quantity</label>
+                        <label class="form-label fw-bold">Số lượng</label>
                         <input type="number" min="1" name="quantity" class="form-control shadow-none" required>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="form-label fw-bold">Adult(Max.)</label>
+                        <label class="form-label fw-bold">Ngưới lớn(Max.)</label>
                         <input type="number" min="1" name="adult" class="form-control shadow-none" required>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="form-label fw-bold">Children(Max.)</label>
+                        <label class="form-label fw-bold">Trẻ em(Max.)</label>
                         <input type="number" min="1" name="children" class="form-control shadow-none" required>
                     </div>
                     <div class="col-12 mb-3">
-                        <label class="form-label fw-bold">Features</label>
+                        <label class="form-label fw-bold">Đặc điểm</label>
                         <div class="row">
                             <?php
                                 $res = selectAll('features');
@@ -164,7 +164,7 @@
                         </div>
                     </div>
                     <div class="col-12 mb-3">
-                        <label class="form-label fw-bold">Facilities</label>
+                        <label class="form-label fw-bold">Tiện ích</label>
                         <div class="row">
                             <?php
                                 $res = selectAll('facilities');
@@ -182,7 +182,7 @@
                         </div>
                     </div>
                     <div class="col-12 mb-3">
-                        <label class="form-label fw-bold">Description</label>
+                        <label class="form-label fw-bold">Mô tả</label>
                         <textarea name="desc" rows="4" class="form-control shadow-none" required></textarea>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
             <form id="edit_room_form" autocomplete="off" >
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Edit Room</h5>
+                <h5 class="modal-title">Sửa thông tin phòng</h5>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -211,27 +211,27 @@
                         <input type="text" name="name" class="form-control shadow-none" required>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="form-label fw-bold">Area</label>
+                        <label class="form-label fw-bold">Diện tích</label>
                         <input type="number" min="1" name="area" class="form-control shadow-none" required>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="form-label fw-bold">Price</label>
+                        <label class="form-label fw-bold">Giá</label>
                         <input type="number" min="1" name="price" class="form-control shadow-none" required>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="form-label fw-bold">Quantity</label>
+                        <label class="form-label fw-bold">Số lượng</label>
                         <input type="number" min="1" name="quantity" class="form-control shadow-none" required>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="form-label fw-bold">Adult(Max.)</label>
+                        <label class="form-label fw-bold">Người lớn(Max.)</label>
                         <input type="number" min="1" name="adult" class="form-control shadow-none" required>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="form-label fw-bold">Children(Max.)</label>
+                        <label class="form-label fw-bold">Trẻ em(Max.)</label>
                         <input type="number" min="1" name="children" class="form-control shadow-none" required>
                     </div>
                     <div class="col-12 mb-3">
-                        <label class="form-label fw-bold">Features</label>
+                        <label class="form-label fw-bold">Đặc điểm</label>
                         <div class="row">
                             <?php
                                 $res = selectAll('features');
@@ -249,7 +249,7 @@
                         </div>
                     </div>
                     <div class="col-12 mb-3">
-                        <label class="form-label fw-bold">Facilities</label>
+                        <label class="form-label fw-bold">Tiện ích</label>
                         <div class="row">
                             <?php
                                 $res = selectAll('facilities');
@@ -267,7 +267,7 @@
                         </div>
                     </div>
                     <div class="col-12 mb-3">
-                        <label class="form-label fw-bold">Description</label>
+                        <label class="form-label fw-bold">Mô tả</label>
                         <textarea name="desc" rows="4" class="form-control shadow-none" required></textarea>
                     </div>
                     <input type="hidden" name="room_id">
@@ -287,7 +287,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Room name</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Loại phòng</h5>
                     <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -296,7 +296,7 @@
                         <form id="add_image_form">
                             <label class="form-label fw-bold">Thêm hình ảnh</label>
                             <input type="file" name="image" accept="[.jpg, .png, .webp, .jpeg]" class="form-control shadow-none mb-3" required>
-                            <button class="btn custom-bg text-white shadow-none">ADD</button>
+                            <button class="btn custom-bg text-white shadow-none">Thêm</button>
                             <input type="hidden" name="room_id">
                         </form>
                     </div>
@@ -304,9 +304,9 @@
                         <table class="table table-hover border text-center">
                             <thead class="sticky-top">
                                 <tr class="bg-dark text-light sticky-top">
-                                    <th scope="col" width="60%">Image</th>
-                                    <th scope="col">Thumb</th>
-                                    <th scope="col">Delete</th>
+                                    <th scope="col" width="60%">Ảnh</th>
+                                    <th scope="col">Ảnh chủ đề</th>
+                                    <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody id="room-image-data">

@@ -82,7 +82,7 @@
                     <div class="card-body">
                         <?php
                             echo <<< price
-                                <h4>$room_data[price].000VND/đêm</h4>
+                                <h4>$room_data[price]VND/đêm</h4>
                             price;
 
                             $rating_q = "SELECT AVG(rating) AS `avg_rating` FROM  `rating_review` 
@@ -151,7 +151,7 @@
                                 <div class="facilities mb-3">
                                     <h6 class="mb-1">Area</h6>
                                     <span class='badge rounded-pill text-dark text-wrap bg-light me-1 mb-1'>
-                                        $room_data[area] sq.ft.
+                                        $room_data[area] m²
                                     </span>   
                                 </div>
                             area;

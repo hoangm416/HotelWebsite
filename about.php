@@ -85,7 +85,7 @@
                         while($row = mysqli_fetch_assoc($about_r)){
                             echo<<<data
                             <div class="swiper-slide swiper-slide-active bg-white text-center overflow-hidden rounded" role="group" aria-label="1 / 8" style="width: 888px;">
-                                <img src="images/about/$path$row[picture]" class="w-100">
+                                <img src="images/about/$row[picture]" class="w-100">
                                 <h5 class="mt-2">$row[name]</h5>
                             </div>
                             data;
