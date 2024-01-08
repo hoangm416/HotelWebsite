@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2024 at 08:09 AM
+-- Generation Time: Jan 08, 2024 at 04:41 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -40,8 +40,7 @@ CREATE TABLE `booking_order` (
   `trans_id` varchar(150) DEFAULT NULL,
   `trans_amt` int(11) NOT NULL,
   `trans_status` varchar(100) NOT NULL DEFAULT 'pending',
-  `tran_resp_code` varchar(200) DEFAULT NULL,
-  `rate_review` int(11) DEFAULT NULL,
+  `trans_resp_code` varchar(200) DEFAULT NULL,
   `datetime` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -49,16 +48,18 @@ CREATE TABLE `booking_order` (
 -- Dumping data for table `booking_order`
 --
 
-INSERT INTO `booking_order` (`booking_id`, `user_id`, `room_id`, `check_in`, `check_out`, `arrival`, `refund`, `booking_status`, `order_id`, `trans_id`, `trans_amt`, `trans_status`, `tran_resp_code`, `rate_review`, `datetime`) VALUES
-(27, 1, 11, '2024-01-01', '2024-01-02', 0, NULL, 'pending', 'ORD_19385258', NULL, 0, 'pending', NULL, NULL, '2024-01-01 23:37:24'),
-(28, 1, 11, '2024-01-01', '2024-01-02', 1, NULL, 'thành công', 'ORD_14899328', '14266867', 30000000, '00', '00', 1, '2024-01-01 23:41:56'),
-(29, 1, 11, '2024-01-02', '2024-01-03', 1, NULL, 'thành công', 'ORD_12111714', '14266914', 30000000, '00', '00', 1, '2024-01-02 00:48:01'),
-(30, 1, 11, '2024-01-02', '2024-01-03', 0, 1, 'cancelled', 'ORD_12272507', '14266930', 30000000, '00', '00', NULL, '2024-01-02 01:11:07'),
-(31, 1, 11, '2024-01-02', '2024-01-03', 0, 1, 'cancelled', 'ORD_16882389', '14266932', 30000000, '00', '00', NULL, '2024-01-02 01:11:57'),
-(32, 1, 11, '2024-01-02', '2024-01-03', 1, NULL, 'thành công', 'ORD_18241294', '14266936', 30000000, '00', '00', 1, '2024-01-02 01:13:05'),
-(33, 1, 11, '2024-01-02', '2024-01-03', 1, NULL, 'thành công', 'ORD_1295839', '14266953', 30000000, '00', '00', 1, '2024-01-02 01:31:10'),
-(34, 1, 10, '2024-01-11', '2024-01-24', 0, NULL, 'pending', 'ORD_14692812', NULL, 0, 'pending', NULL, NULL, '2024-01-07 14:54:55'),
-(35, 1, 11, '2024-01-11', '2024-01-19', 0, NULL, 'thất bại', 'ORD_19001566', '0', 2400, '02', '24', NULL, '2024-01-08 07:49:49');
+INSERT INTO `booking_order` (`booking_id`, `user_id`, `room_id`, `check_in`, `check_out`, `arrival`, `refund`, `booking_status`, `order_id`, `trans_id`, `trans_amt`, `trans_status`, `trans_resp_code`, `datetime`) VALUES
+(28, 1, 11, '2024-01-01', '2024-01-02', 0, 1, 'cancelled', 'ORD_14899328', '14266867', 30000000, '00', '00', '2024-01-01 23:41:56'),
+(29, 1, 11, '2024-01-02', '2024-01-03', 0, 1, 'cancelled', 'ORD_12111714', '14266914', 30000000, '00', '00', '2024-01-02 00:48:01'),
+(30, 1, 11, '2024-01-02', '2024-01-03', 0, 0, 'cancelled', 'ORD_12272507', '14266930', 30000000, '00', '00', '2024-01-02 01:11:07'),
+(31, 1, 11, '2024-01-02', '2024-01-03', 1, NULL, 'thành công', 'ORD_16882389', '14266932', 30000000, '00', '00', '2024-01-02 01:11:57'),
+(32, 1, 11, '2024-01-02', '2024-01-03', 1, NULL, 'thành công', 'ORD_18241294', '14266936', 30000000, '00', '00', '2024-01-02 01:13:05'),
+(33, 1, 11, '2024-01-02', '2024-01-03', 1, NULL, 'thành công', 'ORD_1295839', '14266953', 30000000, '00', '00', '2024-01-02 01:31:10'),
+(40, 1, 11, '2024-01-04', '2024-01-05', 0, 0, 'cancelled', 'ORD_15132831', '14269340', 30000000, '00', '00', '2024-01-03 23:23:15'),
+(41, 1, 11, '2024-01-04', '2024-01-05', 1, NULL, 'thành công', 'ORD_19029371', '14269345', 30000000, '00', '00', '2024-01-03 23:31:00'),
+(42, 1, 10, '2024-01-04', '2024-01-05', 0, 0, 'cancelled', 'ORD_15958345', '14269382', 20000000, '00', '00', '2024-01-04 00:32:04'),
+(43, 1, 11, '2024-01-07', '2024-01-08', 0, NULL, 'thành công', 'ORD_15014193', '14274013', 30000000, '00', '00', '2024-01-07 17:45:11'),
+(44, 1, 11, '2024-01-07', '2024-01-08', 0, NULL, 'thành công', 'ORD_13999752', '14274014', 30000000, '00', '00', '2024-01-07 17:47:45');
 
 --
 -- Indexes for dumped tables
@@ -80,7 +81,7 @@ ALTER TABLE `booking_order`
 -- AUTO_INCREMENT for table `booking_order`
 --
 ALTER TABLE `booking_order`
-  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- Constraints for dumped tables
