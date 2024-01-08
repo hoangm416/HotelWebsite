@@ -9,7 +9,7 @@
 
         <div class="col-lg-4 p-4">
             <h5 class="mb-3">Liên kết</h5>
-            <a href="home.php" class="d-inline-block mb-2 text-dark text-decoration-none">Trang chủ</a> <br> 
+            <!-- <a href="home.php" class="d-inline-block mb-2 text-dark text-decoration-none">Trang chủ</a> <br>  -->
             <a href="rooms.php" class="d-inline-block mb-2 text-dark text-decoration-none">Phòng</a> <br>
             <a href="facilities.php" class="d-inline-block mb-2 text-dark text-decoration-none">Tiện ích</a> <br> 
             <a href="contact.php" class="d-inline-block mb-2 text-dark text-decoration-none">Liên hệ</a> <br> 
@@ -52,51 +52,3 @@
     setActive();
 
 </script>
-
-<!-- <script>
-
-    let register_form = document.getElementById('register_form');
-    
-    register_form.addEventListener('submit', (e)=>{
-        e.preventDefault();
-        
-        let data = new FormData();
-        data.append('name', register_form.elements['name'].value);
-        data.append('pincode', register_form.elements['pincode'].value);
-        data.append('phonenum', register_form.elements['phonenum'].value);
-        data.append('profile', register_form.elements['profile'].files[0]);
-        data.append('address', register_form.elements['address'].value);
-        data.append('dob', register_form.elements['dob'].value);
-        data.append('email', register_form.elements['email'].value);
-        data.append('pass', register_form.elements['pass'].value);
-        data.append('cpass', register_form.elements['cpass'].value);
-        data.append('register', '');
-
-        var myModal = document.getElementById('registerModal');
-        var modal = bootstrap.Modal.getInstance(myModal);
-        modal.hide();
-
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "ajax/login_register.php", true);
-
-        xhr.onload = function() {
-            if(this.responseText == 'Mật khẩu không khớp')
-                alert('error', 'Mật khẩu không khớp');
-            else if(this.responseText == 'Email đã tồn tại')
-                alert('error', 'Email này đã được đăng ký');
-            else if(this.responseText == 'SDT đã tồn tại')
-                alert('error', 'SDT này đã được đăng ký');
-            else if(this.responseText == 'Ảnh không hợp lệ')
-                alert('error', 'Chỉ những định dạng jpeg, png được chấp nhận');
-            else if(this.responseText == 'Đẩy ảnh thất bại')
-                alert('error', 'Tải ảnh lên thất bại');
-            else if(this.responseText == 'Thêm dữ liệu thất bại')
-                alert('error', 'Đăng ký thất bại');
-            else {
-                alert('success', 'Đăng ký tài khoản thành công');
-                register_form.reset();
-            }
-        }
-        xhr.send(data);
-    })
-</script> -->

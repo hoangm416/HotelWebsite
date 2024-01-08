@@ -27,11 +27,10 @@
                 <?php 
                     if (isset($_SESSION["user"]) && $_SESSION["user"]==true)
                     {
-                        // $fullname = $_SESSION["fullname"];
                         echo <<< data
                             <div class="btn-group">
                                 <button type="button" class="btn btn-outline-dark shadow-none dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                                    Người dùng
+                                    $_SESSION[uName]
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-lg-end">
                                     <li><a class="dropdown-item" href="profile.php">Hồ sơ</a></li>
