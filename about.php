@@ -14,7 +14,7 @@
         <?php require('inc/header.php'); ?>
 
         <div class="my-5 px-4">
-            <h2 class="fw-bold h-font text-center">VỀ CHÚNG TÔI</h2>
+            <h2 class="fw-bold b-font text-center">VỀ CHÚNG TÔI</h2>
             <div class="h-line bg-dark"></div>
             <p class="text-center mt-3">
                 Lorem síossl ssssssssssssssssssssssssss
@@ -74,7 +74,7 @@
             </div>
         </div>
 
-        <h3 class="my-5 fw-bold h-font text-center">NHÓM QUẢN LÝ</h3>
+        <h3 class="my-5 fw-bold b-font text-center">NHÓM QUẢN LÝ</h3>
 
         <div class="container px-4">
             <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">

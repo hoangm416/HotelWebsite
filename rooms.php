@@ -29,7 +29,7 @@
     ?>
 
     <div class="my-5 px-4">
-        <h2 class="fw-bold h-font text-center">Danh sách phòng</h2>
+        <h2 class="fw-bold b-font text-center">Danh sách phòng</h2>
         <div class="h-line bg-dark"></div>
     </div>
 

@@ -130,7 +130,7 @@
 <br><br><br>
 
     <!--Our Rooms-->
-    <h2 class = "mt-5 pt-4 mb-4 text-center fx-bold h-font ">Thông tin các phòng</h2>
+    <h2 class = "mt-5 pt-4 mb-4 text-center fx-bold b-font ">Thông tin các phòng</h2>
     <div class="container">
         <div class="row">
         <?php
@@ -237,7 +237,7 @@
         </div>
     </div>
 
-    <h2 class = "mt-5 pt-4 mb-4 text-center fx-bold h-font ">Dịch vụ</h2>
+    <h2 class = "mt-5 pt-4 mb-4 text-center fx-bold b-font ">Dịch vụ</h2>
 
     <div class = "container">
         <div class = "row justify-content-evenly px-lg-0 px-md-0 px-5">
@@ -260,7 +260,7 @@
     </div>
 
     <!-- Testimonials -->
-    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Ðánh giá của khách hàng</h2>
+    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold b-font">Ðánh giá của khách hàng</h2>
 
     <div class="container mt-5">
         <div class="swiper swiper-testimonials">
@@ -309,7 +309,7 @@
 
     <!-- Reach us -->
 
-    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">TÌM CHÚNG TÔI</h2>
+    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold b-font">TÌM CHÚNG TÔI</h2>
 
     <div class="container">
         <div class="row">
