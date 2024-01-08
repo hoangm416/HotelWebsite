@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 01, 2024 at 07:35 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th1 07, 2024 lúc 02:59 PM
+-- Phiên bản máy phục vụ: 10.4.28-MariaDB
+-- Phiên bản PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `hotelwebsite`
+-- Cơ sở dữ liệu: `hotelwebsite`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
@@ -33,35 +33,38 @@ CREATE TABLE `users` (
   `idencard` varchar(20) NOT NULL,
   `phonenum` varchar(20) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `datetime` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`id`, `full_name`, `idencard`, `phonenum`, `email`, `password`) VALUES
-(1, 'cris ronaldo', '023321332', '0123456', 'xyz@gmail.com', '$2y$10$vF1zJfJ8MKqMY.TD4zL8K.SjwVM8x4VdQUzOkgbAXJO12LP45cPTq');
+INSERT INTO `users` (`id`, `full_name`, `idencard`, `phonenum`, `email`, `password`, `datetime`) VALUES
+(1, 'cris ronaldo', '023321332', '0123456', 'xyz@gmail.com', '$2y$10$XAKGiOYbQriVnZ5kx5.w..RaXAcQLAU4Dd0tzFqUL4okdbtK01In2', '2024-01-07 16:59:03'),
+(3, 'vuong hoang', '123456789012', '1234567890', 'nguyen@gmail.com', '$2y$10$lBbc2TRESfecgfRY3PHvOeHCRt6nhZI2z58cxBUHpHxDzDqRz/eLe', '2024-01-07 16:59:03'),
+(4, 'Nguyễn Văn B', '023345094893', '0223344556', 'vanb@gmail.com', '$2y$10$F.c97UnfLuzV5rIQojaM1O6VCnOW7Go0q3WtWXesZr39Jl5bQfATe', '2024-01-07 17:13:17');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
