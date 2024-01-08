@@ -28,7 +28,7 @@
         $total_rows = mysqli_num_rows($res);
 
         if($total_rows==0){
-            $output = json_encode(["table_data"=>"<b>No Data Found!</b>", "pagination"=>'']);
+            $output = json_encode(["table_data"=>"<b>Không có dữ liệu!</b>", "pagination"=>'']);
             echo $output;
             exit;
         }
@@ -97,26 +97,26 @@
 
             if($page!=1){
                 $pagination .="<li class='page-item '>
-                    <button onclick='change_page(1)' class='page-link shadow-none'>First</button>        
+                    <button onclick='change_page(1)' class='page-link shadow-none'>Trang đầu</button>        
                 </li>"; 
             }
 
             $disabled = ($page==1) ? "disabled" : "";
             $prev = $page-1;
             $pagination .="<li class='page-item $disabled'>
-                <button onclick='change_page($prev)' class='page-link shadow-none'>Prev</button>
+                <button onclick='change_page($prev)' class='page-link shadow-none'>Trước</button>
             </li>";
 
 
             $disabled = ($page==$total_pages) ? "disabled" : "";
             $next = $page+1;
             $pagination .="<li class='page-item $disabled'>
-                <button onclick='change_page($next)' class='page-link shadow-none'>Next</button>        
+                <button onclick='change_page($next)' class='page-link shadow-none'>Tiếp</button>        
             </li>";
 
             if($page!=$total_pages){
                 $pagination .="<li class='page-item '>
-                    <button onclick='change_page($total_pages)' class='page-link shadow-none'>Last</button>        
+                    <button onclick='change_page($total_pages)' class='page-link shadow-none'>Trang cuối</button>        
                 </li>"; 
             }
 

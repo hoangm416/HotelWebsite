@@ -1,6 +1,6 @@
 <?php 
 
-    define('SITE_URL','http://localhost:3000/HotelWebsite/');
+    define('SITE_URL','http://localhost/HotelWebsite/');
     define('ABOUT_IMG_PATH',SITE_URL.'images/about/');
     define('CAROUSEL_IMG_PATH',SITE_URL.'images/carousel/');
     define('FEATURES_IMG_PATH',SITE_URL.'images/features/');

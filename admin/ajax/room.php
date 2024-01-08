@@ -172,7 +172,7 @@
             echo $output;
         }
         else{
-            echo"<h3 class='text-center text-danger'>No rooms to show!</h3>";
+            echo"<h3 class='text-center text-danger'>Hết Phòng!</h3>";
         }
     }
 

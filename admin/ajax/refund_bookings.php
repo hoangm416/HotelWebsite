@@ -18,7 +18,7 @@
         $table_data = "";
 
         if(mysqli_num_rows($res)==0){
-            echo"<b>No Data Found!</b>";
+            echo"<b>Không có dữ liệu!</b>";
             exit;
         }
 
@@ -54,7 +54,7 @@
                     </td>
                     <td>
                     <button type='button' onclick='refund_booking($data[booking_id])' class='btn btn-success btn-sm fw-bold shadow-none'>
-                        <i class='bi bi-cash-stack'></i>  Refund
+                        <i class='bi bi-cash-stack'></i>  Hoàn tiền
                     </button>
                     </td>
                 </tr>

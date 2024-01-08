@@ -81,7 +81,7 @@
     <div class="container availablility-form">
         <div class=row>
             <div class="col-lg-12 bg-white shadow p-4 rounder">
-                <h5 class="mb-4">Đặt phòng</h5>
+                <h5 class="mb-4">Tùy chọn</h5>
                 <form action="rooms.php">
                     <div class="row align-items-end">
                         <div class="col-lg-3 mb-3">
@@ -118,7 +118,7 @@
                         </div>
                         <input type="hidden" name="check_availability">
                         <div class="col-lg-1 mb-lg-3 mt-2">
-                            <button type="submit" class="btn text-white shadow-none custom-bg">Hoàn tất</button>
+                            <button type="submit" class="btn text-white shadow-none custom-bg">Tìm kiếm</button>
                         </div>
                     </div>
                 </form>
@@ -205,7 +205,7 @@
                                             $features_data
                                         </div>
                                         <div class="facilities mb-4">
-                                            <h6 class="mb-1">Tiện ích</h6>
+                                            <h6 class="mb-1">Tiện nghi</h6>
                                             $facilities_data
                                         </div>
                                         <div class="guests mb-4">

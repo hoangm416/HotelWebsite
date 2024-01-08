@@ -18,7 +18,7 @@
         $table_data = "";
 
         if(mysqli_num_rows($res)==0){
-            echo"<b>No Data Found!</b>";
+            echo"<b>Không có dữ liệu!</b>";
             exit;
         }
 
@@ -56,11 +56,11 @@
                     </td>
                     <td>
                     <button type='button' onclick='assign_room($data[booking_id])' class='btn text-white btn-sm fw-bold custom-bg shadow-none' data-bs-toggle='modal' data-bs-target='#assign-room'>
-                        <i class='bi bi-check2-square'></i> Assign Room
+                        <i class='bi bi-check2-square'></i> Giao phòng
                     </button>
                     <br>
                     <button type='button' onclick='cancel_booking($data[booking_id])' class='mt-2 btn btn-outline-danger btn-sm fw-bold shadow-none'>
-                        <i class='bi bi-trash'></i> Cancel Booking
+                        <i class='bi bi-trash'></i> Hủy đặt phòng
                     </button>
                     </td>
                 </tr>
