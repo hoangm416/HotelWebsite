@@ -116,7 +116,7 @@
 
                             echo <<< features
                                 <div class="mb-3">
-                                    <h6 class="mb-1">Features</h6>
+                                    <h6 class="mb-1">Đặc điểm</h6>
                                     $features_data
                                 </div>
                             features;
@@ -130,7 +130,7 @@
                             }
                             echo<<<facilities
                                 <div class="facilities mb-3">
-                                    <h6 class="mb-1">Facilities</h6>
+                                    <h6 class="mb-1">Tiện ích</h6>
                                     $facilities_data
                                 </div>
                             facilities;
@@ -167,7 +167,7 @@
 
             <div class="col-12 mt-4 px-4">
                 <div class="mb-5">
-                    <h5>Description</h5>
+                    <h5>Mô tả</h5>
                     <p>
                         <?php echo $room_data['description']?>
                     </p>
