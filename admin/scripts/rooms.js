@@ -159,7 +159,7 @@ let add_room_form = document.getElementById('add_room_form');
         
             xhr.onload=function(){
                 if(this.responseText == 1 ) {
-                    alert('success', 'Status toggle');
+                    alert('success', 'Thay đổi trạng thái thành công!');
                     get_all_rooms();
                 }
                 else {

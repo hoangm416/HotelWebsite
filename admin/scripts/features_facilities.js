@@ -20,7 +20,7 @@ function add_feature() {
         modal.hide();
 
         if (this.responseText == 1) {
-            alert('success','New feature added!');
+            alert('success','Thêm thành công!');
             feature_s_form.elements['feature_name'].value = '';
             get_features();
         }
@@ -94,7 +94,7 @@ function add_facility() {
             alert('error','Hệ thống lỗi, vui lòng thử lại sau!');
         }
         else {
-            alert('success','New facility added');
+            alert('success','Thêm thành công!');
             facility_s_form.reset();
             get_facilities();
         }
