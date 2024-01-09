@@ -36,7 +36,7 @@
                 $query = "SELECT bo.*, bd.* FROM `booking_order` bo
                     INNER JOIN `booking_details` bd ON bo.booking_id = bd.booking_id
                     WHERE ((bo.booking_status='thành công') 
-                    OR (bo.booking_status='cancelled')
+                    OR (bo.booking_status='hủy bỏ')
                     OR (bo.booking_status='thất bại'))
                     AND (bo.user_id=?)
                     ORDER BY bo.booking_id DESC";
@@ -67,7 +67,7 @@
                             $btn="<button onclick='cancel_booking($data[booking_id])' type='button' class='btn btn-danger btn-sm shadow-none'>Hủy</button>";
                         }
                     }
-                    else if($data['booking_status']=='cancelled')
+                    else if($data['booking_status']=='hủy bỏ')
                     {
                         $status_bg = "bg-danger";
 
