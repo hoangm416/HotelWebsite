@@ -254,9 +254,12 @@
                 } 
             ?>
 
-            <div class = "col-lg-2 col-md-2 btn btn-outline-dark text-center border-light rounded shadow py-4 my-3 ">
+            <!-- <div class = "col-lg-2 col-md-2 btn btn-outline-dark text-center border-light rounded shadow py-4 my-3 ">
                 <a href="facilities.php" class = "mt-5 mt-sm-12"> Các dịch vụ khác <br> >>></a>
-            </div>
+            </div> -->
+            <a href = "facilities.php" class = "col-lg-2 col-md-2 btn btn-outline-dark text-center border-light rounded shadow py-4 my-3">
+                <div class="mt-4"> Các dịch vụ khác<br>>>> </div>
+            </a>
         </div>
     </div>
 

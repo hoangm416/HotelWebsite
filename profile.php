@@ -54,12 +54,12 @@
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">CMND/CCCD</label>
-                                <input name="idencard" type="text" value="<?php echo $u_fetch['idencard']?>" class="form-control shadow-none" required>
+                                <input name="idencard" type="text" value="<?php echo $u_fetch['idencard']?>" class="form-control shadow-none" disabled required>
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Email</label>
-                                <textarea name="email" class="form-control shadow-none" rows="1" required><?php echo $u_fetch['email']?></textarea>
+                                <textarea name="email" class="form-control shadow-none" rows="1" disabled required><?php echo $u_fetch['email']?></textarea>
                             </div>
 
                             
