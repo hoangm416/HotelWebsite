@@ -43,8 +43,11 @@
                 <li>
                     <a class="nav-link text-white" href="features_facilities.php">Tiện ích nổi bật</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="carousel.php">Hiệu ứng</a>
+                </li>
                 <li>
-                    <a class="nav-link text-white" href="user_queries.php">Phản hồi</a>
+                    <a class="nav-link text-white" href="user_queries.php">Phản ánh</a>
                 </li>
                 <li>
                     <a class="nav-link text-white" href="rate_review.php">Đánh giá & phản hồi</a>

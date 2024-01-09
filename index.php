@@ -50,28 +50,29 @@
     <!-- Carousel -->
     <div class="container-fluid px-lg-4 mt-4">
         <div class="swiper swiper-container">
-            <?php 
-              $res = selectAll('carousel');
-              while ($row = mysqli_fetch_assoc($res)) {
-                $path = CAROUSEL_IMG_PATH;
-                echo <<<data
-                    <div class="swiper-slide">
-                     <img src="$path$row[image]" class="w-100 d-block"/>
-                    </div>
-                data;
-                }
-
-            ?>
             <div class="swiper-wrapper">
-            <div class="swiper-slide">
+                <?php 
+                    $res = selectAll('carousel');
+                    while ($row = mysqli_fetch_assoc($res)) {
+                        $path = CAROUSEL_IMG_PATH;
+                        echo <<<data
+                            <div class="swiper-slide">
+                            <img src="$path$row[image]" class="w-100 d-block"/>
+                            </div>
+                        data;
+                        }
+
+                    ?>
+            
+            <!-- <div class="swiper-slide">
                 <img src="images/carousel/5.png" class="w-100 d-block"/>
             </div>
             <div class="swiper-slide">
                 <img src="images/carousel/6.png" class="w-100 d-block"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/carousel/7.png" class="w-100 d-block"/>
-            </div>
+                <img src="images/carousel/7.png" class="w-100 d-block"/> -->
+            <!-- </div> -->
             </div>
         </div>
     </div>
@@ -413,7 +414,7 @@
         rotate: 50,
         stretch: 0,
         depth: 100,
-        modifier: 1,
+      ier: 1,  modif,
         slideShadows: false,
       },
       pagination: {

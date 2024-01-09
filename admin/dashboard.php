@@ -78,7 +78,7 @@
             <div class="row mb-3">
                 <div class="col-md-3 mb-4">
                         <div class="card text-center text-primary p-3">
-                            <h6>Tổng số phòng</h6>
+                            <h6>Tổng đặt phòng</h6>
                             <h1 class="mt-2 mb-0"  id="total_bookings"><?php echo $current_bookings['total_bookings']; ?> </h1>
                             <h4 class="mt-2 mb-0" id="total_amt"><?php echo $total_amt; ?> VND</h4>                        </div>
                 </div>
