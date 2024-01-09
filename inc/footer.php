@@ -21,10 +21,10 @@
             <a href="<?php echo $contact_r['fb'] ?>" class="d-inline-block text-dark text-decoration-none mb-2 ">
              <i class="bi bi-facebook me-1"></i> Facebook
             </a><br>
-            <a href="<?php echo $contact_r['insta'] ?>" class="d-inline-block text-dark text-decoration-none ">
+            <a href="<?php echo $contact_r['insta'] ?>" class="d-inline-block text-dark text-decoration-none mb-2">
              <i class="bi bi-instagram me-1"></i> Instagram
             </a><br>
-            <a href="<?php echo "tiktok.com" ?>" class="d-inline-block text-dark text-decoration-none ">
+            <a href="<?php echo "tiktok.com" ?>" class="d-inline-block text-dark text-decoration-none mb-2">
              <i class="bi bi-tiktok me-1"></i> TikTok
             </a><br>
     </div>
