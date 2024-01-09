@@ -2,7 +2,7 @@
 
     require('../inc/db_config.php');
     require('../inc/essentials.php');
-    //adminLogin();
+    adminLogin();
 
     if (isset($_POST['get_bookings'])) 
     {
@@ -13,7 +13,7 @@
             WHERE (bo.order_id LIKE ? OR bd.phonenum LIKE ? OR bd.user_name LIKE ?)
             AND (bo.booking_status =? AND bo.refund =?) ORDER BY bo.booking_id ASC";
         
-        $res = select($query, ["%$frm_data[search]%", "%$frm_data[search]%","%$frm_data[search]%", "cancelled", 0,], 'sssss');
+        $res = select($query, ["%$frm_data[search]%", "%$frm_data[search]%","%$frm_data[search]%", "hủy bỏ", 0,], 'sssss');
         $i = 1;
         $table_data = "";
 
