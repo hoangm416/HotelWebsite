@@ -26,7 +26,7 @@ function refund_booking(id){
                 get_bookings();
             }
             else {
-                alert('error','Server Down!');                        
+                alert('error','Lỗi Server!');                        
             }
         }
         xhr.send(data);

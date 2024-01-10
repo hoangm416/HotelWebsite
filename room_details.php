@@ -82,16 +82,27 @@
                     <div class="card-body">
                         <?php
                             echo <<< price
-                                <h4>$room_data[price].000VND/đêm</h4>
+                                <h4>$room_data[price]VND/đêm</h4>
                             price;
+
+                            $rating_q = "SELECT AVG(rating) AS `avg_rating` FROM  `rating_review` 
+                             WHERE `room_id` = '$room_data[id]' ORDER BY `sr_no` DESC LIMIT 20";
+
+                            $rating_res = mysqli_query($con,$rating_q);
+                            $rating_fetch = mysqli_fetch_assoc($rating_res);
+
+                            $rating_data = "";
+
+                            if($rating_fetch['avg_rating']!=NULL)
+                            {
+                                for($i=1; $i <= $rating_fetch['avg_rating']; $i++){
+                                    $rating_data .="<i class='bi bi-star-fill text-warning'></i>";
+                            }
+                            }
 
                             echo <<< rating
                                 <div class="mb-3">
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i> 
+                                    $rating_data
                                 </div>
                             rating;
 
@@ -105,7 +116,7 @@
 
                             echo <<< features
                                 <div class="mb-3">
-                                    <h6 class="mb-1">Features</h6>
+                                    <h6 class="mb-1">Đặc điểm</h6>
                                     $features_data
                                 </div>
                             features;
@@ -119,7 +130,7 @@
                             }
                             echo<<<facilities
                                 <div class="facilities mb-3">
-                                    <h6 class="mb-1">Facilities</h6>
+                                    <h6 class="mb-1">Tiện ích</h6>
                                     $facilities_data
                                 </div>
                             facilities;
@@ -140,7 +151,7 @@
                                 <div class="facilities mb-3">
                                     <h6 class="mb-1">Area</h6>
                                     <span class='badge rounded-pill text-dark text-wrap bg-light me-1 mb-1'>
-                                        $room_data[area] sq.ft.
+                                        $room_data[area] m²
                                     </span>   
                                 </div>
                             area;
@@ -156,30 +167,52 @@
 
             <div class="col-12 mt-4 px-4">
                 <div class="mb-5">
-                    <h5>Description</h5>
+                    <h5>Mô tả</h5>
                     <p>
                         <?php echo $room_data['description']?>
                     </p>
                 </div>
 
                 <div>
-                    <h5 class="mb-3">Nhận xét và đánh giá</h5>
-                    <div>
-                        <div class="profile d-flex align-items-center mb-2">
-                        <img src="images/features/star.svg" width="30px">
-                        <h6 class="m-0 ms-2">Người dùng 69</h6>
-                        </div>
-                        <p>
-                        Tôi rất hài lòng về dịch vụ phục vụ chu đáo và nụ cười niềm nở của nhân viên tại khách sạn này, đây quả là một trong những khách sạn tốt nhất tôi từng ở.
-                        </p>
-                        <div class="rating">
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                        </div> 
-                    </div>
+                    <h5 class="mb-3">Phản hồi & đánh giá</h5>
+                    <?php 
+                
+                        $review_q = "SELECT rr.*,u.full_name AS uname, r.name AS rname FROM `rating_review` rr
+                            INNER JOIN `users` u ON rr.user_id = u.id
+                            INNER JOIN `rooms` r ON rr.room_id = r.id
+                            WHERE rr.room_id = '$room_data[id]'
+                            ORDER BY `sr_no` DESC LIMIT 15";
+
+                        $review_res = mysqli_query($con, $review_q);
+
+                            // Kiểm tra số lượng đánh giá và phản hồi
+                        if (mysqli_num_rows($review_res) == 0) {
+                                echo "<div class='text-center'>Chưa có đánh giá nào!</div>";
+                            } 
+                        else {
+                            while ($row = mysqli_fetch_assoc($review_res)) 
+                            {
+                                $stars = "<i class='bi bi-star-fill text-warning'></i>";
+                                for ($i = 1; $i < $row['rating']; $i++) {
+                                    $stars .= "<i class='bi bi-star-fill text-warning'></i>";
+                                }
+                                echo <<<reviews
+                                <div class="mb-4">
+                                <div class="profile d-flex align-items-center mb-2">
+                                <h6 class="m-0">Người dùng:$row[uname]</h6>
+                                </div>
+                                <p class = "mb-1">
+                                $row[review]
+                                </p>
+                                <div class="rating" style="padding-bottom: 12px;">
+                                    $stars
+                                </div> 
+                            </div>
+                        reviews;
+                            } 
+                            }
+                    ?>
+                    
                 </div>
             </div>
 

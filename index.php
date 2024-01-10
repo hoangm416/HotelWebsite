@@ -50,28 +50,29 @@
     <!-- Carousel -->
     <div class="container-fluid px-lg-4 mt-4">
         <div class="swiper swiper-container">
-            <?php 
-              $res = selectAll('carousel');
-              while ($row = mysqli_fetch_assoc($res)) {
-                $path = CAROUSEL_IMG_PATH;
-                echo <<<data
-                    <div class="swiper-slide">
-                     <img src="$path$row[image]" class="w-100 d-block"/>
-                    </div>
-                data;
-                }
-
-            ?>
             <div class="swiper-wrapper">
-            <div class="swiper-slide">
+                <?php 
+                    $res = selectAll('carousel');
+                    while ($row = mysqli_fetch_assoc($res)) {
+                        $path = CAROUSEL_IMG_PATH;
+                        echo <<<data
+                            <div class="swiper-slide">
+                            <img src="$path$row[image]" class="w-100 d-block"/>
+                            </div>
+                        data;
+                        }
+
+                    ?>
+            
+            <!-- <div class="swiper-slide">
                 <img src="images/carousel/5.png" class="w-100 d-block"/>
             </div>
             <div class="swiper-slide">
                 <img src="images/carousel/6.png" class="w-100 d-block"/>
             </div>
             <div class="swiper-slide">
-                <img src="images/carousel/7.png" class="w-100 d-block"/>
-            </div>
+                <img src="images/carousel/7.png" class="w-100 d-block"/> -->
+            <!-- </div> -->
             </div>
         </div>
     </div>
@@ -81,36 +82,44 @@
     <div class="container availablility-form">
         <div class=row>
             <div class="col-lg-12 bg-white shadow p-4 rounder">
-                <h5 class="mb-4">Đặt phòng</h5>
-                <form>
+                <h5 class="mb-4">Tùy chọn</h5>
+                <form action="rooms.php">
                     <div class="row align-items-end">
                         <div class="col-lg-3 mb-3">
                             <label class="form-label" style="font-weight: 500;">Nhận phòng</label>
-                            <input type="date" class="form-control shadow-none" >  
+                            <input type="date" class="form-control shadow-none" name="checkin" required>  
                         </div>
                         <div class="col-lg-3 mb-3">
                             <label class="form-label" style="font-weight: 500;">Trả phòng</label>
-                            <input type="date" class="form-control shadow-none" >  
+                            <input type="date" class="form-control shadow-none" name="checkout" required>  
                         </div>
                         <div class="col-lg-3 mb-3">
-                        <label class="form-label" style="font-weight: 500;">Người lớn</label>
-                            <select class="form-select shadow-none">
-                                <option value="1">Một</option>
-                                <option value="2">Hai</option>
-                                <option value="3">Ba</option>
-                                <option value="4">Bốn</option>
+                        <label class="form-label" style="font-weight: 500;" >Người lớn</label>
+                            <select class="form-select shadow-none" name="adult">
+                                <?php 
+                                    $guests_q = mysqli_query($con, "SELECT MAX(adult) AS `max_adult`, MAX(children) AS `max_children` 
+                                        FROM `rooms` WHERE `status`='1' AND `removed`='0'");
+                                    $guests_res = mysqli_fetch_assoc($guests_q);
+
+                                    for($i=1;$i<=$guests_res['max_adult']; $i++){
+                                        echo"<option value='$i'>$i</option>";
+                                    }
+                                ?>
                             </select>
                         </div>
                         <div class="col-lg-2 mb-3">
                         <label class="form-label" style="font-weight: 500;">Trẻ em</label>
-                            <select class="form-select shadow-none">
-                                <option value="1">Một</option>
-                                <option value="2">Hai</option>
-                                <option value="3">Ba</option>
+                            <select class="form-select shadow-none" name="children">
+                                <?php 
+                                    for($i=1;$i<=$guests_res['max_children']; $i++){
+                                        echo"<option value='$i'>$i</option>";
+                                    }
+                                ?>
                             </select>
                         </div>
+                        <input type="hidden" name="check_availability">
                         <div class="col-lg-1 mb-lg-3 mt-2">
-                            <button type="submit" class="btn text-white shadow-none custom-bg">Hoàn tất</button>
+                            <button type="submit" class="btn text-white shadow-none custom-bg">Tìm kiếm</button>
                         </div>
                     </div>
                 </form>
@@ -122,7 +131,7 @@
 <br><br><br>
 
     <!--Our Rooms-->
-    <h2 class = "mt-5 pt-4 mb-4 text-center fx-bold h-font ">Thông tin các phòng</h2>
+    <h2 class = "mt-5 pt-4 mb-4 text-center fx-bold b-font ">Thông tin các phòng</h2>
     <div class="container">
         <div class="row">
         <?php
@@ -156,6 +165,34 @@
                             $thumb_res = mysqli_fetch_assoc($thumb_q);
                             $room_thumb = ROOMS_IMG_PATH.$thumb_res['image'];
                         }
+
+                        $rating_q = "SELECT AVG(rating) AS `avg_rating` FROM  `rating_review` 
+                         WHERE `room_id` = '$room_data[id]' ORDER BY `sr_no` DESC LIMIT 20";
+
+                        $rating_res = mysqli_query($con,$rating_q);
+                        $rating_fetch = mysqli_fetch_assoc($rating_res);
+
+                        $rating_data = "";
+
+                        if($rating_fetch['avg_rating']!=NULL)
+                        {
+                            $rating_data = "<div class='rating mb-4'>
+                                <h6 class='mb-1'>Đánh giá</h6>
+                                <span class='badge rounded-pill bg-light'>
+                            ";
+
+                            for($i=0; $i< $rating_fetch['avg_rating']; $i++){
+                                $rating_data .="<i class='bi bi-star-fill text-warning'></i>";
+                            }
+                                $rating_data .= "</span>
+                                    </div>
+                                ";
+                        
+                        }
+
+                        
+
+
                         // print room card
                         echo <<<data
                             <div class="col-lg-4 col-md-6 my-3">
@@ -163,13 +200,13 @@
                                     <img src="$room_thumb" class="card-img-top">
                                     <div class="card-body">
                                         <h5>$room_data[name]</h5>
-                                        <h6 class="mb-4">$room_data[price].000VND/đêm</h6>
+                                        <h6 class="mb-4">$room_data[price]VND/đêm</h6>
                                         <div class="features mb-4">
                                             <h6 class="mb-1">Đặc điểm</h6>
                                             $features_data
                                         </div>
                                         <div class="facilities mb-4">
-                                            <h6 class="mb-1">Đặc điểm khác</h6>
+                                            <h6 class="mb-1">Tiện nghi</h6>
                                             $facilities_data
                                         </div>
                                         <div class="guests mb-4">
@@ -181,15 +218,7 @@
                                                 $room_data[children] Trẻ em
                                             </span>
                                         </div>
-                                        <div class="rating mb-4">
-                                            <h6 class="mb-1">Đánh giá</h6>
-                                            <span class="badge rounded-pill bg-light">
-                                                <i class="bi bi-star-fill text-warning"></i>
-                                                <i class="bi bi-star-fill text-warning"></i>
-                                                <i class="bi bi-star-fill text-warning"></i>
-                                                <i class="bi bi-star-fill text-warning"></i>  
-                                            </span>   
-                                        </div>
+                                        $rating_data
                                         <div class="d-flex justify-content-evenly mb-2">
                                             <a href="confirm_booking.php?id=$room_data[id]" class="btn btn-sm text-white custom-bg shadow-none">Đặt phòng</a>
                                             <a href="room_details.php?id=$room_data[id]" class="btn btn-sm btn-outline-dark shadow-none" >Thông tin chi tiết</a>
@@ -209,80 +238,69 @@
         </div>
     </div>
 
-    <h2 class = "mt-5 pt-4 mb-4 text-center fx-bold h-font ">Dịch vụ</h2>
+    <h2 class = "mt-5 pt-4 mb-4 text-center fx-bold b-font ">Dịch vụ</h2>
 
     <div class = "container">
         <div class = "row justify-content-evenly px-lg-0 px-md-0 px-5">
             <?php
                 $res = mysqli_query($con,"SELECT  * FROM `facilities` ORDER BY `id` DESC LIMIT 5");
                 while ($row = mysqli_fetch_assoc($res)) {
+                    $img = FACILITIES_IMG_PATH.$row['icon'];
                     echo<<<data
                         <div class = "col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                            <img src = "http://localhost:3000/HotelWebsite/images/facilities/$row[icon]" width = "50px" class = "mt-4">
+                            <img src = $img width = "50px" class = "mt-4">
                             <h5 class = "mt-md-3">$row[name]</h5>
                         </div>
                     data;
                 } 
             ?>
 
-            <div class = "col-lg-2 col-md-2 btn btn-outline-dark text-center border-light rounded shadow py-4 my-3 ">
+            <!-- <div class = "col-lg-2 col-md-2 btn btn-outline-dark text-center border-light rounded shadow py-4 my-3 ">
                 <a href="facilities.php" class = "mt-5 mt-sm-12"> Các dịch vụ khác <br> >>></a>
-            </div>
+            </div> -->
+            <a href = "facilities.php" class = "col-lg-2 col-md-2 btn btn-outline-dark text-center border-light rounded shadow py-4 my-3">
+                <div class="mt-4"> Các dịch vụ khác<br>>>> </div>
+            </a>
         </div>
     </div>
 
     <!-- Testimonials -->
-    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Ðánh giá của khách hàng</h2>
+    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold b-font">Ðánh giá của khách hàng</h2>
 
     <div class="container mt-5">
         <div class="swiper swiper-testimonials">
             <div class="swiper-wrapper mb-5">
+             <?php 
+             
+              $review_q = "SELECT rr.*,u.full_name AS uname, r.name AS rname FROM `rating_review` rr
+                INNER JOIN `users` u ON rr.user_id = u.id
+                INNER JOIN `rooms` r ON rr.room_id = r.id
+                ORDER BY `sr_no` DESC LIMIT 6";
 
-                <div class="swiper-slide bg-white p-4">
-                <div class="profile d-flex align-items-center mb-3">
-                    <img src="images/features/star.svg" width="30px">
-                    <h6 class="m-0 ms-2">Người dùng 69</h6>
-                </div>
-                <p>
-                Tôi rất hài lòng về dịch vụ phục vụ chu đáo và nụ cười niềm nở của nhân viên tại khách sạn này, đây quả là một trong những khách sạn tốt nhất tôi từng ở.
-                </p>
-                <div class="rating"></div>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i> 
-                </div>
-                <div class="swiper-slide bg-white p-4">
-                <div class="profile d-flex align-items-center mb-3">
-                    <img src="images/features/star.svg" width="30px">
-                    <h6 class="m-0 ms-2">Người dùng 829</h6>
-                </div>
-                <p>
-                Khách sạn này mang đến những trải nghiệm ở nơi nghỉ ngơi tuyệt vời. Phòng rộng rãi sạch sẽ, cảnh quan xanh mát, và đặc biệt là nhân viên phục vụ rất nhiệt tình, luôn sẵn lòng hỗ trợ khách hàng mọi yêu cầu. Tôi sẽ cân nhắc lựa chọn khách sạn này nếu lại ghé qua vùng này trong tương lai.
-                </p>
-                <div class="rating"></div>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i> 
-                </div>
-                <div class="swiper-slide bg-white p-4">
-                <div class="profile d-flex align-items-center mb-3">
-                    <img src="images/features/star.svg" width="30px">
-                    <h6 class="m-0 ms-2">Người dùng 666</h6>
-                </div>
-                <p>
-                Tôi không thể nhắc đến khách sạn này mà không nói lên sự hài lòng của mình. Ngôi khách sạn có vị trí đắc địa với view hướng biển rất đẹp. Dịch vụ ở đây chuyên nghiệp và trách nhiệm, đặc biệt là thái độ nhiệt tình, vui vẻ của nhân viên bốc xếp hành lý khi tôi đến và đi. Tôi sẽ chia sẻ khách sạn này với bạn bè và mong trở lại trong tương lai.
-                </p>
-                <div class="rating"></div>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i> 
-                </div>
+                $review_res = mysqli_query($con, $review_q);
+
+                // Kiểm tra số lượng đánh giá và phản hồi
+                if (mysqli_num_rows($review_res) == 0) {
+                    echo "<div class='text-center'>Chưa có đánh giá nào!</div>";
+                } else {
+                    while ($row = mysqli_fetch_assoc($review_res)) {
+                        $stars = "<i class='bi bi-star-fill text-warning'></i>";
+                        for ($i = 1; $i < $row['rating']; $i++) {
+                            $stars .= "<i class='bi bi-star-fill text-warning'></i>";
+                        }
+
+                        echo "<div class='swiper-slide bg-white p-4'>";
+                        echo "<div class='profile d-flex align-items-center mb-3'>";
+                        echo "<h6 class='m-0 '>Người dùng:$row[uname]</h6>";
+                        echo "</div>";
+                        echo "<p>$row[review]</p>";
+                        echo "<div class='rating'>$stars</div>";
+                        echo "</div>";
+                    }
+                }
+            ?>
+             
+            
 
             <div>
                 <div class="swiper-pagination"></div>
@@ -296,7 +314,7 @@
 
     <!-- Reach us -->
 
-    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">TÌM CHÚNG TÔI</h2>
+    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold b-font">TÌM CHÚNG TÔI</h2>
 
     <div class="container">
         <div class="row">
@@ -399,7 +417,7 @@
         rotate: 50,
         stretch: 0,
         depth: 100,
-        modifier: 1,
+      ier: 1,  modif,
         slideShadows: false,
       },
       pagination: {

@@ -17,7 +17,7 @@
         INNER JOIN `booking_details` bd ON bo.booking_id = bd.booking_id
         INNER JOIN `users` uc ON bo.user_id = uc.id
         WHERE ((bo.booking_status ='thành công' AND bo.arrival =1) 
-        OR (bo.booking_status ='cancelled' AND bo.refund =1)
+        OR (bo.booking_status ='hủy bỏ' AND bo.refund =1)
         OR (bo.booking_status ='thất bại'))
         AND bo.booking_id = '$frm_data[id]'";
 
@@ -63,7 +63,7 @@
             </tr>
         ";
 
-        if($data['booking_status'] == 'cancelled')
+        if($data['booking_status'] == 'hủy bỏ')
         {
             $refund = ($data['refund']) ? "Đã hoàn tiền" : "Chưa hoàn tiền";
 

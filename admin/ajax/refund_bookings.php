@@ -2,7 +2,7 @@
 
     require('../inc/db_config.php');
     require('../inc/essentials.php');
-    //adminLogin();
+    adminLogin();
 
     if (isset($_POST['get_bookings'])) 
     {
@@ -13,12 +13,12 @@
             WHERE (bo.order_id LIKE ? OR bd.phonenum LIKE ? OR bd.user_name LIKE ?)
             AND (bo.booking_status =? AND bo.refund =?) ORDER BY bo.booking_id ASC";
         
-        $res = select($query, ["%$frm_data[search]%", "%$frm_data[search]%","%$frm_data[search]%", "cancelled", 0,], 'sssss');
+        $res = select($query, ["%$frm_data[search]%", "%$frm_data[search]%","%$frm_data[search]%", "hủy bỏ", 0,], 'sssss');
         $i = 1;
         $table_data = "";
 
         if(mysqli_num_rows($res)==0){
-            echo"<b>No Data Found!</b>";
+            echo"<b>Không có dữ liệu!</b>";
             exit;
         }
 
@@ -54,7 +54,7 @@
                     </td>
                     <td>
                     <button type='button' onclick='refund_booking($data[booking_id])' class='btn btn-success btn-sm fw-bold shadow-none'>
-                        <i class='bi bi-cash-stack'></i>  Refund
+                        <i class='bi bi-cash-stack'></i>  Hoàn tiền
                     </button>
                     </td>
                 </tr>

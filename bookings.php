@@ -36,7 +36,7 @@
                 $query = "SELECT bo.*, bd.* FROM `booking_order` bo
                     INNER JOIN `booking_details` bd ON bo.booking_id = bd.booking_id
                     WHERE ((bo.booking_status='thành công') 
-                    OR (bo.booking_status='cancelled')
+                    OR (bo.booking_status='hủy bỏ')
                     OR (bo.booking_status='thất bại'))
                     AND (bo.user_id=?)
                     ORDER BY bo.booking_id DESC";
@@ -57,31 +57,31 @@
                         $status_bg = "bg-success";
 
                         if($data['arrival']==1){
-                            $btn="<a href='generate_pdf.php?gen_pdf&id=$data[booking_id]' class='btn btn-dark btn-sm shadow-none'>Download PDF</a>";
+                            $btn="<a href='generate_pdf.php?gen_pdf&id=$data[booking_id]' class='btn btn-dark btn-sm shadow-none'>Xuất hóa đơn</a>";
 
                         if($data['rate_review']==0){
-                            $btn.="<button type='button' onclick='review_room($data[booking_id],$data[room_id])' data-bs-toggle='modal' data-bs-target='#reviewModal' class='btn btn-dark btn-sm shadow-none ms-2'>Rate & Review</button>";
+                            $btn.="<button type='button' onclick='review_room($data[booking_id],$data[room_id])' data-bs-toggle='modal' data-bs-target='#reviewModal' class='btn btn-dark btn-sm shadow-none ms-2'>Đánh giá & phản hồi</button>";
                         }
                     }
                         else{
-                            $btn="<button onclick='cancel_booking($data[booking_id])' type='button' class='btn btn-danger btn-sm shadow-none'>Cancel</button>";
+                            $btn="<button onclick='cancel_booking($data[booking_id])' type='button' class='btn btn-danger btn-sm shadow-none'>Hủy</button>";
                         }
                     }
-                    else if($data['booking_status']=='cancelled')
+                    else if($data['booking_status']=='hủy bỏ')
                     {
                         $status_bg = "bg-danger";
 
                         if($data['refund']==0){
-                            $btn="<span class='badge bg-primary'>Refund in process!</span>";
+                            $btn="<span class='badge bg-primary'>Đang trong quá trình hoàn tiền!</span>";
                         }
                         else{
-                            $btn="<a href='generate_pdf.php?gen_pdf&id=$data[booking_id]' class='btn btn-dark btn-sm shadow-none'>Download PDF</a>";
+                            $btn="<a href='generate_pdf.php?gen_pdf&id=$data[booking_id]' class='btn btn-dark btn-sm shadow-none'>Xuất hóa đơn</a>";
                         }
                     }
                     else
                     { 
                         $status_bg = "bg-warning";
-                        $btn="<a href='generate_pdf.php?gen_pdf&id=$data[booking_id]' class='btn btn-dark btn-sm shadow-none'>Download PDF</a>";
+                        $btn="<a href='generate_pdf.php?gen_pdf&id=$data[booking_id]' class='btn btn-dark btn-sm shadow-none'>Xuất hóa đơn</a>";
                     }
 
                     echo<<<bookings
@@ -109,6 +109,7 @@
                 }
 
             ?>
+                <?php require('inc/footer.php'); ?>
         
 
         </div>
@@ -154,16 +155,15 @@
 
     <?php
         if(isset($_GET['cancel_status'])){
-            alert('success','Booking Cancelled!');
+            alert('success','Phòng đã hủy!');
         }
-        else if(isset($_GET['review_status'])){
-            alert('thành công','Cảm ơn bạn đã đánh giá & bình luận!');
+        if (isset($_GET['rate_review'])) {
+            alert('success','Cảm ơn bạn đã đánh giá & bình luận!');
         }
     ?>
 
 
 
-    <?php require('inc/footer.php'); ?>
 
     <script>
         function cancel_booking(id)
@@ -179,7 +179,7 @@
                     window.location.href="bookings.php?cancel_status=true";
                   }
                   else{
-                    alert('error','Cancellation Failed!')
+                    alert('error','Hủy phòng thất bại!')
                   }
                 }
 
@@ -220,7 +220,7 @@
                     var modal = bootstrap.Modal.getInstance(myModal);
                     modal.hide();
 
-                    alert('Thất bại');
+                    alert('error','Thất bại');
                 }
             }
 

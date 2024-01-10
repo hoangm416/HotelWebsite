@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-image: url('https://images.pexels.com/photos/2373201/pexels-photo-2373201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-image: url('https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
             background-size: cover;
         }  
     </style>
@@ -36,9 +36,6 @@
 
            $errors = array();
            
-           if (empty($fullName) OR empty($idencard) OR empty($phonenum) OR empty($email) OR empty($password) OR empty($passwordRepeat)) {
-            array_push($errors, "Yêu cầu nhập đủ thông tin");
-           }
            if (!ctype_digit($idencard) || strlen($idencard) != 12) {
             array_push($errors, "Chỉ chấp nhận số CCCD đúng 12 chữ số");
            }
@@ -98,22 +95,22 @@
                 Chú ý: Nhập đúng thông tin cá nhân, khi check-in trực tiếp chúng tôi sẽ kiểm tra
             </span>
             <div class="form-group">
-                <input type="text" class="form-control" name="fullname" placeholder="Họ và tên:">
+                <input type="text" required type="text" class="form-control" name="fullname" placeholder="Họ và tên:">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="idencard" placeholder="Số CCCD:">
+                <input type="number" required type="number" class="form-control" name="idencard" placeholder="Số Căn cước công dân:">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="phonenum" placeholder="Số điện thoại:">
+                <input type="number" required type="number" class="form-control" name="phonenum" placeholder="Số điện thoại:">
             </div>
             <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="Email:">
+                <input type="email" required type="email" class="form-control" name="email" placeholder="Email:">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="Mật khẩu:">
+                <input type="password" required type="password" class="form-control" name="password" placeholder="Mật khẩu:">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" name="repeat_password" placeholder="Nhập lại mật khẩu:">
+                <input type="password" required type="password" class="form-control" name="repeat_password" placeholder="Nhập lại mật khẩu:">
             </div>
             <div class="form-btn">
                 <input type="submit" class="btn btn-primary" value="Đăng ký" name="submit">

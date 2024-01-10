@@ -15,7 +15,7 @@
         $query = "SELECT bo.*, bd.* FROM `booking_order` bo
             INNER JOIN `booking_details` bd ON bo.booking_id = bd.booking_id
             WHERE ((bo.booking_status ='thành công' AND bo.arrival =1) 
-            OR (bo.booking_status ='cancelled' AND bo.refund =1)
+            OR (bo.booking_status ='hủy bỏ' AND bo.refund =1)
             OR (bo.booking_status ='thất bại'))
             AND (bo.order_id LIKE ? OR bd.phonenum LIKE ? OR bd.user_name LIKE ?)
             ORDER BY bo.booking_id DESC";
@@ -28,7 +28,7 @@
         $total_rows = mysqli_num_rows($res);
 
         if($total_rows==0){
-            $output = json_encode(["table_data"=>"<b>No Data Found!</b>", "pagination"=>'']);
+            $output = json_encode(["table_data"=>"<b>Không có dữ liệu!</b>", "pagination"=>'']);
             echo $output;
             exit;
         }
@@ -45,7 +45,7 @@
             if($data['booking_status']=='thành công'){
                 $status_bg = 'bg-success';
             }
-            else if($data['booking_status']=='cancelled'){
+            else if($data['booking_status']=='hủy bỏ'){
                 $status_bg = 'bg-danger';
             }
             else {
@@ -97,26 +97,26 @@
 
             if($page!=1){
                 $pagination .="<li class='page-item '>
-                    <button onclick='change_page(1)' class='page-link shadow-none'>First</button>        
+                    <button onclick='change_page(1)' class='page-link shadow-none'>Trang đầu</button>        
                 </li>"; 
             }
 
             $disabled = ($page==1) ? "disabled" : "";
             $prev = $page-1;
             $pagination .="<li class='page-item $disabled'>
-                <button onclick='change_page($prev)' class='page-link shadow-none'>Prev</button>
+                <button onclick='change_page($prev)' class='page-link shadow-none'>Trước</button>
             </li>";
 
 
             $disabled = ($page==$total_pages) ? "disabled" : "";
             $next = $page+1;
             $pagination .="<li class='page-item $disabled'>
-                <button onclick='change_page($next)' class='page-link shadow-none'>Next</button>        
+                <button onclick='change_page($next)' class='page-link shadow-none'>Tiếp</button>        
             </li>";
 
             if($page!=$total_pages){
                 $pagination .="<li class='page-item '>
-                    <button onclick='change_page($total_pages)' class='page-link shadow-none'>Last</button>        
+                    <button onclick='change_page($total_pages)' class='page-link shadow-none'>Trang cuối</button>        
                 </li>"; 
             }
 

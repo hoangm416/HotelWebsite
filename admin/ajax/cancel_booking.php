@@ -18,7 +18,7 @@
         $query = "UPDATE `booking_order` SET `booking_status`=?, `refund`=?
             WHERE `booking_id`=? AND `user_id`=?";
 
-        $values = ['cancelled',0,$frm_data['id'],$_SESSION['uId']];
+        $values = ['hủy bỏ',0,$frm_data['id'],$_SESSION['uId']];
 
         $result = update($query,$values,'siii');
 

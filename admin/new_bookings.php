@@ -27,10 +27,10 @@
                             <thead class="sticky-top">
                                 <tr class="bg-dark text-light">
                                     <th scope="col">#</th>
-                                    <th scope="col">User Details</th>
-                                    <th scope="col">Room Details</th>
-                                    <th scope="col">Bookings Details</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Thông tin người dùng</th>
+                                    <th scope="col">Thông tin phòng</th>
+                                    <th scope="col">Thông tin đặt phòng</th>
+                                    <th scope="col">Hành động</th>
                                 </tr>
                             </thead>
                             <tbody id="table-data">
@@ -55,11 +55,11 @@
                 <form id="assign_room_form">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Assign Room</h5>
+                    <h5 class="modal-title">Giao phòng</h5>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label class="form-label fw-bold">Room Number</label>
+                        <label class="form-label fw-bold">Số phòng</label>
                         <input type="text" name="room_no" class="form-control shadow-none" required>
                     </div>
                     <span class="badge rounded-pill bg-info text-dark mb-3 text-wrap lh-base">

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-image: url('https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-image: url('https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
             background-size: cover;
         }  
     </style>
@@ -76,14 +76,13 @@
             echo '
                 <form action="forgot_password.php" method="post">
                     <div class="form-group">
-                        <input type="email" placeholder="Nhập Email khôi phục:" name="email" class="form-control">
+                        <input type="email" required type="email" placeholder="Nhập Email khôi phục:" name="email" class="form-control">
                     </div>
                     <div class="form-btn">
                         <input type="submit" value="Gửi mã OTP" name="check_email" class="btn btn-primary">
                     </div>
                 </form>
             ';
-
         } 
         else if ($_SESSION["reset_stage"] == "check_otp") {
             echo '
@@ -92,7 +91,7 @@
                         <p>Hệ thống đã gửi mã OTP đến email của bạn. Vui lòng kiểm tra!</p>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Nhập mã OTP:" name="otp" class="form-control">
+                        <input type="number" required type="number" placeholder="Nhập mã OTP:" name="otp" class="form-control">
                     </div>
                     <div class="form-btn">
                         <input type="submit" value="Xác nhận" name="check_otp" class="btn btn-primary">
@@ -108,10 +107,10 @@
                         <p>Đặt lại mật khẩu cho tài khoản '.$email.'</p>
                     </div>
                     <div class="form-group">
-                        <input type="password" placeholder="Nhập mật khẩu mới:" name="new_password" class="form-control">
+                        <input type="password" required type="password" placeholder="Nhập mật khẩu mới:" name="new_password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <input type="password" placeholder="Xác nhận mật khẩu mới:" name="confirm_password" class="form-control">
+                        <input type="password" required type="password" placeholder="Xác nhận mật khẩu mới:" name="confirm_password" class="form-control">
                     </div>
                     <div class="form-btn">
                         <input type="submit" value="Xác nhận" name="reset_password" class="btn btn-primary">

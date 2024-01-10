@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-image: url('https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-image: url('https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
             background-size: cover;
         }  
     </style>
@@ -40,20 +40,22 @@
                     $_SESSION["uPhone"] = $user['phonenum'];
                     header("Location: index.php");
                     die();
-                }else{
+                }
+                else{
                     echo "<div class='alert alert-danger'>Mật khẩu không đúng</div>";
                 }
-            }else{
-                echo "<div class='alert alert-danger'>Email không đúng</div>";
+            }
+            else{
+                echo "<div class='alert alert-danger'>Email không tồn tại</div>";
             }
         }
         ?>
       <form action="login.php" method="post">
         <div class="form-group">
-            <input type="email" placeholder="Nhập Email:" name="email" class="form-control">
+            <input type="email" required type="email" placeholder="Nhập Email:" name="email" class="form-control">
         </div>
         <div class="form-group">
-            <input type="password" placeholder="Nhập mật khẩu:" name="password" class="form-control">
+            <input type="password" required type="password" placeholder="Nhập mật khẩu:" name="password" class="form-control">
         </div>
         <div class="form-group" style="display: flex; justify-content: space-between; align-items: center">
             <input type="submit" value="Đăng nhập" name="login" class="btn btn-primary">

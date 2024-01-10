@@ -14,28 +14,26 @@
         <?php require('inc/header.php'); ?>
 
         <div class="my-5 px-4">
-            <h2 class="fw-bold h-font text-center">VỀ CHÚNG TÔI</h2>
+            <h2 class="fw-bold b-font text-center">VỀ CHÚNG TÔI</h2>
             <div class="h-line bg-dark"></div>
             <p class="text-center mt-3">
-                Lorem síossl ssssssssssssssssssssssssss
-                <br>ssssssssssssssssssssssssssssssssssssssssssssssss
+            Với những tiện ích và dịch vụ tuyệt vời, khách sạn BK Hotel là lựa chọn hoàn hảo 
+            <br>cho du khách muốn có một kỳ nghỉ hoặc chuyến công tác tuyệt vời tại Hà Nội.
             </p>
         </div>
 
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
-                    <h3 class="mb-3">Lorem ipsum dolor sit</h3>
+                    <h3 class="mb-3">Đội ngũ quản lý chuyên nghiệp</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit
-                        Officiis esse iusto ad laudantium maxime eos harum?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit
-                        Officiis esse iusto ad laudantium maxime eos harum?
+                    Đội ngũ quản lý của khách sạn BK Hotel được tạo thành bởi một nhóm chuyên gia giàu kinh nghiệm trong ngành khách sạn và du lịch. 
+                    Với sự chuyên nghiệp và sự tận tâm, chúng tôi đảm bảo rằng mọi khách hàng nhận được dịch vụ tốt nhất và trải nghiệm lưu trú đáng nhớ.
                     </p>
                 </div>
 
                 <div class="col-lg-5 col-md-4 mb-4 order-lg-2 order-md-2 order-1">
-                    <img src="https://t3.ftcdn.net/jpg/00/57/04/58/240_F_57045887_HHJml6DJVxNBMqMeDqVJ0ZQDnotp5rGD.jpg" width="500px">
+                    <img src="https://hthaostudio.com/wp-content/uploads/2020/08/Son-Tran-12.jpg" width="400px">
                 </div>
 
 
@@ -74,7 +72,7 @@
             </div>
         </div>
 
-        <h3 class="my-5 fw-bold h-font text-center">NHÓM QUẢN LÝ</h3>
+        <h3 class="my-5 fw-bold b-font text-center">NHÓM QUẢN LÝ</h3>
 
         <div class="container px-4">
             <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
@@ -85,7 +83,7 @@
                         while($row = mysqli_fetch_assoc($about_r)){
                             echo<<<data
                             <div class="swiper-slide swiper-slide-active bg-white text-center overflow-hidden rounded" role="group" aria-label="1 / 8" style="width: 888px;">
-                                <img src="images/about/$path$row[picture]" class="w-100">
+                                <img src="images/about/$row[picture]" class="w-100">
                                 <h5 class="mt-2">$row[name]</h5>
                             </div>
                             data;

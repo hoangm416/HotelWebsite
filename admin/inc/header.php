@@ -1,5 +1,5 @@
 <div class="container-fluid bg-info text-light p-3 d-flex align-items-center justify-content-between sticky-top">
-    <h3 class="mb-0 h-font">BẢNG ĐIỀU KHIỂN</h3>
+    <h3 class="mb-0 b-font fw-bold">BK Hotel</h3>
     <a href="logout.php" class="btn btn-light btn-sm">Đăng xuất</a>
 </div>
 
@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse flex-column align-items-stretch mt-2" id="adminDropdown">
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="dashboard.php">Trang chủ</a>
+                    <a class="nav-link text-white" href="dashboard.php">Thống kê</a>
                 </li>
                 <li class="nav-item">
                     <button class="btn text-white px-3 w-100 shadow-none text-start d-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#bookingLinks">
@@ -43,8 +43,11 @@
                 <li>
                     <a class="nav-link text-white" href="features_facilities.php">Tiện ích nổi bật</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="carousel.php">Hiệu ứng</a>
+                </li>
                 <li>
-                    <a class="nav-link text-white" href="user_queries.php">Phản hồi</a>
+                    <a class="nav-link text-white" href="user_queries.php">Phản ánh</a>
                 </li>
                 <li>
                     <a class="nav-link text-white" href="rate_review.php">Đánh giá & phản hồi</a>
